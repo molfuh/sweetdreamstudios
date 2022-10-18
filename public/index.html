@@ -2,22 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="color-scheme" content="dark light">
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
       content="Web site created using create-react-app"
     />
-
+    <script type="text/javascript"></script>
+    <script>
+      $(document).ready(function () {
+      $(".css-transitions-only-after-page-load").each(function (index, element) {
+          setTimeout(function () { $(element).removeClass("css-transitions-only-after-page-load") }, 10);
+      });
+    });
+    </script>
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <!-- <link rel="stylesheet" href="/dark.css" media="(prefers-color-scheme: dark)" />
-    <link
-      rel="stylesheet"
-      href="/light.css"
-      media="(prefers-color-scheme: light)"
-    /> -->
-    
+<link
+  rel="stylesheet"
+  href="/light.css"
+  media="(prefers-color-scheme: light)"
+/> -->
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -35,7 +40,7 @@
     -->
     <title>React App</title>
   </head>
-  <body>
+  <body class="css-transitions-only-after-page-load">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
@@ -48,5 +53,8 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+  <footer>
+    <script> </script>
+  </footer>  
+</body>
 </html>
