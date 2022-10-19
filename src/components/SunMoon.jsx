@@ -32,7 +32,7 @@ const CloudsScroll = keyframes`
 
 const Stars = styled.div`
     background-image: url(${stars});
-    height: 30vh;
+    height: 100vh;
     width: 100vw;
     position: relative;
 `;
@@ -49,10 +49,10 @@ const Cloud = styled.div`
     background: white;
     border-radius: 100px;
     position: absolute;
-    margin: 320px auto 20px;
+    margin: 50% auto;
     animation-name: ${CloudsScroll};
 animation-duration: 60s;
-animation-delay: 2s;
+// animation-delay: 2s;
 animation-fill-mode: backwards;
 animation-iteration-count: infinite;
 animation-timing-function: linear;
@@ -90,8 +90,6 @@ const Cloud3 = styled(Cloud)`
     animation-delay: 20s;
 `
 
-
-
 const PlanetEnter = keyframes`
 0% {top: 50%; left: -100%}
 100% {top: 5%; left: 0}
@@ -118,7 +116,7 @@ animation-fill-mode: forwards;
 
 const Sun = styled.div`
 margin-left: 25px;
-position: absolute;
+position: relative;
 width: 100px;
 height: 100px;
 background-color: #ffec8c;

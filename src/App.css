@@ -1,11 +1,9 @@
 body {
-  height: 300vh;
+  height: 500vh;
   width: 100vw;
-  /* background-color: #052177; */
 }
 
 body.light-mode {
-  /* animation: changeBackground 6s ease-out 2s; */
   background: linear-gradient(to bottom, #ffffff 0%, #72cafd 100%);
 }
 body.dark-mode {
