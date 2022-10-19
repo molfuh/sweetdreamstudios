@@ -5,19 +5,77 @@ body {
 }
 
 body.light-mode {
-  background-color: #d4d4eb;
-  color: #333;
+  /* animation: changeBackground 6s ease-out 2s; */
+  background: linear-gradient(to bottom, #ffffff 0%, #72cafd 100%);
 }
 body.dark-mode {
-  background-color: #052177;
-  color: #999;
+  background: linear-gradient(to bottom, #000000 0%, #0059ff 100%);
 }
 
-body.light-mode, body.dark-mode {
-  transition: background-color 1.5s ease;
+.material-icons {
+  font-family: 'Material Icons';
 }
 
-.css-transitions-only-after-page-load * {
+.material-icons.moon:before {
+  content: 'moon';
+  color: white;
+}
+
+/* 
+@keyframes changeOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.background-color-change {
+  animation: changeOpacity 6s ease-out;
+  animation-fill-mode: backwards;
+}  */
+
+/* .light-mode, .dark-mode {
+  animation: changeBackground 2s ease-out;
+  animation-fill-mode: backwards;
+}  */
+
+/* @keyframes changeBackground {
+  from {
+    background: linear-gradient(to bottom, #ffffff 0%, #72cafd 100%);
+  }
+  to {
+    background: linear-gradient(to bottom, #000000 0%, #0059ff 100%);
+  }
+} */
+
+/* body.light-mode, body.dark-mode {
+  transition: opacity 1.5s ease;
+} */
+
+.darkModeToggle {
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+}
+
+/* 
+@keyframes .changeBackground {
+  from {
+    color: red;
+  }
+  to {
+    color: green;
+  }
+}
+
+.background-color-change {
+  animation: changeBackground 6s ease-out 2s;
+  animation-fill-mode: backwards;
+} */
+
+.preload * {
   -webkit-transition: none !important;
   -moz-transition: none !important;
   -ms-transition: none !important;
