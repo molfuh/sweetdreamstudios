@@ -4,6 +4,7 @@ import useDarkMode from 'use-dark-mode';
 // import MenuIcon from '@mui/icons-material/MenuIcon';
 // import DarkMode from '@mui/icons-material/DarkMode';
 import styled, {keyframes} from 'styled-components';
+import stars from './stars.png';
 
 
 export default function SunMoon ({darkMode}) {
@@ -11,10 +12,25 @@ export default function SunMoon ({darkMode}) {
 
   return (
     <>
-        {darkMode.value ? <Moon/> : <Sun />}
+        {darkMode.value ? <Stars><Moon/></Stars> : <><Sun /><Cloud/></>}
     </>
   );
 };
+
+const Cloud = styled.div`
+    background-color: white;
+    height: 30px;
+    width: 30px;
+`;
+
+const Stars = styled.div`
+    background-image: url(${stars});
+    height: 30vh;
+    opacity: 0.5;
+    width: 100vw;
+`;
+
+
 
 
 const PlanetEnter = keyframes`
