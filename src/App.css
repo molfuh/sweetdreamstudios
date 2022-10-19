@@ -1,13 +1,14 @@
 body {
   height: 500vh;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 body.light-mode {
-  background: linear-gradient(to bottom, #ffffff 0%, #72cafd 100%);
+  background: linear-gradient(to bottom, rgb(114 202 253 / 50%) 0%, rgb(114 202 253 / 100%) 100%);
 }
 body.dark-mode {
-  background: linear-gradient(to bottom, #000000 0%, #0059ff 100%);
+  background: linear-gradient(to bottom, #000000 0%, #0a2177 100%);
 }
 
 .material-icons {
@@ -96,6 +97,7 @@ body.dark-mode {
   position: fixed;
   right: 5%;
   bottom: 5%;
+  z-index: 100;
 }
 
 /*

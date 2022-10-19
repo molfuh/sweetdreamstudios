@@ -34,7 +34,8 @@ const Stars = styled.div`
     background-image: url(${stars});
     height: 100vh;
     width: 100vw;
-    position: relative;
+    position: absolute;
+    // z-index:0;
 `;
 
 const Cloud = styled.div`
@@ -101,12 +102,13 @@ position: absolute;
 // top: 0;
 // right: 0;
 // bottom: 0;
+margin-left: 50px;
 // left: 0;
 width: 100px;
 height: 100px;
 // background-color: transparent;
 border-radius: 50%;
-box-shadow: 25px 10px 0px 0px #fff;
+box-shadow: -25px 10px 0px 0px #fff;
 animation-name: ${PlanetEnter};
 animation-duration: 2s;
 animation-fill-mode: forwards;
@@ -116,7 +118,7 @@ animation-fill-mode: forwards;
 
 const Sun = styled.div`
 margin-left: 25px;
-position: relative;
+position: absolute;
 width: 100px;
 height: 100px;
 background-color: #ffec8c;
