@@ -9,10 +9,10 @@ import stars from './stars.png';
 
 export default function SunMoon ({darkMode}) {
     // const darkMode = useDarkMode(false);
-
+const random = Math.random();
   return (
     <>
-        {darkMode.value ? <><Stars/><Moon/></> : <><Cloud /><Cloud2/><Cloud3/><Sun /></>}
+        {darkMode.value ? <><Stars/><ShootingStar1 random={random}/><ShootingStar2/><ShootingStar3/><Moon/></> : <><Cloud /><Cloud2/><Cloud3/><Sun /></>}
     </>
   );
 };
@@ -50,13 +50,15 @@ const Cloud = styled.div`
     background: white;
     border-radius: 100px;
     position: absolute;
-    margin: 50% auto;
+    margin: 30% auto;
     animation-name: ${CloudsScroll};
 animation-duration: 60s;
 // animation-delay: 2s;
+animation-direction: reverse;
 animation-fill-mode: backwards;
 animation-iteration-count: infinite;
 animation-timing-function: linear;
+box-shadow: 6px 6px 13px 0px #7d7e7e;
     &:after {
       width: 100px;
       height: 100px;
@@ -81,15 +83,63 @@ animation-timing-function: linear;
 
 const Cloud2 = styled(Cloud)`
   /* animation-delay: 3s; */
-  top: 100px;
-  animation-direction: reverse;
-  animation-delay: 10s;
+  top: 25%;
+  animation-delay: 5s;
+  animation-direction: normal;
 `
 
 const Cloud3 = styled(Cloud)`
-    top: 75px;
+    top: 50%;
     animation-delay: 20s;
 `
+
+const ShootingStars = keyframes`
+// 0% {width: 10px; transform:translateX(0);}
+// 50% {width: 200px;transform:translateX(0);}
+// 100% {width: 10px;transform:translateX(200px);}
+0%
+{
+    transform: rotate(215deg) translateX(0);
+    opacity: 1;
+    width: 0;
+}
+70%
+{
+    opacity: 1;
+    width: 200px;
+}
+100%
+{
+    transform: rotate(215deg) translateX(-1500px);
+    opacity: 0;
+    width: 0;
+}
+`;
+
+const ShootingStar1 = styled.div`
+animation-name: ${ShootingStars};
+animation-duration: 5s;
+border-radius: 50%;
+animation-fill-mode: backwards;
+// animation-delay: 1s;
+// animation-delay: ${props =>props.random}%;
+animation-iteration-count: infinite;
+width: 2px;
+height:2px;
+background: linear-gradient(to left,#bb91e5 0%,#4047a8 100%);
+`;
+
+const ShootingStar2 = styled(ShootingStar1)`
+  animation-delay: 4s;
+  animation-duration: 3s;
+  margin-top: 50%;
+`;
+
+const ShootingStar3 = styled(ShootingStar1)`
+margin-left: 20%;
+animation-delay: 2s;
+animation-duration: 3s;
+`;
 
 const PlanetEnter = keyframes`
 0% {top: 50%; left: -100%}

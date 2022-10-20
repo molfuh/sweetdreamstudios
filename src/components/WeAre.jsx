@@ -30,8 +30,8 @@ const SDSLogo = styled.img`
 const SweetDreamStudiosWrapper = styled.div`
   user-select: none;
   width: min-content;
-  color: #acd0db;
-  mix-blend-mode: multiply;
+  color: #0a143dbf;
+  mix-blend-mode: hard-light;
   height: 100vh;
   margin: 0 25px;
   z-index: 0;
@@ -43,7 +43,8 @@ const SweetDreamStudiosWrapper = styled.div`
 const SweetDreamStudiosWrapperDark = styled(SweetDreamStudiosWrapper)`
   color: #fff;
   // mix-blend-mode: difference;
-  mix-blend-mode: unset;
+  // mix-blend-mode: unset;
+  mix-blend-mode: exclusion;
 `;
 
 const Intro = styled.div`
