@@ -38,6 +38,7 @@ const SweetDreamStudiosWrapper = styled.div`
   position: absolute;
   display: flex;
   align-items: center;
+  // scroll-snap-align: center;
 `;
 
 const SweetDreamStudiosWrapperDark = styled(SweetDreamStudiosWrapper)`

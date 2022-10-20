@@ -58,7 +58,7 @@ animation-direction: reverse;
 animation-fill-mode: backwards;
 animation-iteration-count: infinite;
 animation-timing-function: linear;
-box-shadow: 6px 6px 13px 0px #7d7e7e;
+box-shadow: 6px 6px 13px 0px #7d7e7ea8;
     &:after {
       width: 100px;
       height: 100px;
@@ -118,10 +118,10 @@ const ShootingStars = keyframes`
 
 const ShootingStar1 = styled.div`
 animation-name: ${ShootingStars};
-animation-duration: 5s;
+animation-duration: 4s;
 border-radius: 50%;
 animation-fill-mode: backwards;
-// animation-delay: 1s;
+animation-delay: 3s;
 // animation-delay: ${props =>props.random}%;
 animation-iteration-count: infinite;
 width: 2px;
