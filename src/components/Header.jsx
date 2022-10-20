@@ -4,9 +4,10 @@ import styled, {keyframes} from 'styled-components';
 export default function Header ({darkMode}) {
   return (
     <HeaderStyle>
-    <a>home</a>
-    <a>meet the team</a>
-    <a>projects</a>
+      <a>go home</a>
+      <a>meet the team</a>
+      <a>see our projects</a>
+      <a>follow us</a>
     </HeaderStyle>
   );
 };
@@ -23,6 +24,6 @@ const HeaderStyle = styled.div`
     a {
         min-width: 25%;
         display: flex;
-        justify-content: center;    
+        justify-content: center;
     }
 `;

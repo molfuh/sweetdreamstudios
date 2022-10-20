@@ -110,7 +110,7 @@ const ShootingStars = keyframes`
 }
 100%
 {
-    transform: rotate(215deg) translateX(-1500px);
+    transform: rotate(215deg) translateX(-200vw);
     opacity: 0;
     width: 0;
 }
@@ -118,7 +118,7 @@ const ShootingStars = keyframes`
 
 const ShootingStar1 = styled.div`
 animation-name: ${ShootingStars};
-animation-duration: 4s;
+animation-duration: 5s;
 border-radius: 50%;
 animation-fill-mode: backwards;
 animation-delay: 3s;
@@ -126,17 +126,22 @@ animation-delay: 3s;
 animation-iteration-count: infinite;
 width: 2px;
 height:2px;
+position: absolute;
+  top: 0;
 background: linear-gradient(to left,#bb91e5 0%,#4047a8 100%);
 `;
 
 const ShootingStar2 = styled(ShootingStar1)`
   animation-delay: 4s;
   animation-duration: 3s;
-  margin-top: 50%;
+  /* bottom: 50%; */
+  top: -25%;
 `;
 
 const ShootingStar3 = styled(ShootingStar1)`
-margin-left: 20%;
+/* left: 50%; */
+/* margin-left: 20%; */
+top: -50%;
 animation-delay: 2s;
 animation-duration: 3s;
 `;
