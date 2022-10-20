@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, {keyframes} from 'styled-components';
+import styled from 'styled-components';
 import SDSLogoImg from './Sweet_Dream_Studios_Final20.png';
 
 export default function WeAre ({darkMode}) {
@@ -53,11 +53,11 @@ const SweetDreamStudiosWrapperDark = styled(SweetDreamStudiosWrapper)`
   mix-blend-mode: exclusion;
 `;
 
-const Intro = styled.div`
-  position: relative;
-  font-size: 10vw;
-  // z-index: 1;
-`;
+// const Intro = styled.div`
+//   position: relative;
+//   font-size: 10vw;
+//   // z-index: 1;
+// `;
 
 const SweetDreamStudios = styled.div`
   position: relative;

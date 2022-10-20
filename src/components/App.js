@@ -9,9 +9,9 @@ import useDarkMode from 'use-dark-mode';
 import styled from 'styled-components';
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
+  // Switch,
+  // Route,
+  // Link
 } from "react-router-dom";
 
 export default function App () {
@@ -35,12 +35,12 @@ export default function App () {
   );
 }
 
-const ScrollContainer = styled.div`
-  scroll-snap-type: y proximity;
-  /* height: 100%; */
-  scroll-snap-points-y: repeat(100vh);
-  /* overflow: scroll; */
-`;
+// const ScrollContainer = styled.div`
+//   scroll-snap-type: y proximity;
+//   /* height: 100%; */
+//   scroll-snap-points-y: repeat(100vh);
+//   /* overflow: scroll; */
+// `;
 
 const FixedPosition = styled.div`
   position: fixed;
@@ -57,4 +57,4 @@ const FirstView = styled.div`
   height: 100vh;
   scroll-snap-align: start;
 `;
-const SecondView = styled(FirstView)``;
+// const SecondView = styled(FirstView)``;

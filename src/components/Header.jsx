@@ -1,13 +1,13 @@
 import React from 'react';
-import styled, {keyframes} from 'styled-components';
+import styled from 'styled-components';
 
 export default function Header ({darkMode}) {
   return (
     <HeaderStyle>
-      <a>go home</a>
-      <a>meet the team</a>
-      <a>see our projects</a>
-      <a>follow us</a>
+      <a href="_blank">go home</a>
+      <a href="_blank">meet the team</a>
+      <a href="_blank">see our projects</a>
+      <a href="_blank">follow us</a>
     </HeaderStyle>
   );
 };
