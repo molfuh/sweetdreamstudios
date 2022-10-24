@@ -17,7 +17,9 @@ body.light-mode {
 }
 
 body.dark-mode {
-  background: linear-gradient(to bottom, #000000 0%, #0a2177 100%);
+  /* background: linear-gradient(to bottom, #000000 0%, #0a2177 100%); */
+  /* background: linear-gradient(to bottom, rgb(0 0 0) 0%, rgb(7, 18, 67) 15%, rgb(3, 22, 104) 50%, rgb(3, 22, 104) 100%); */
+  background: linear-gradient(to bottom, rgb(0 0 0) 0%, rgb(7, 18, 67) 8%, rgb(29 15 63) 20%, rgb(5 4 8) 60%, rgb(0 0 0) 100%);
 }
 
 .material-icons {

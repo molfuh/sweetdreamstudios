@@ -35,6 +35,7 @@ const Stars = styled.div`
     height: 100vh;
     width: 100vw;
     position: absolute;
+    z-index: -1;
     // z-index:0;
 `;
 

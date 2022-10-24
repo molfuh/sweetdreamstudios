@@ -37,7 +37,7 @@ const SweetDreamStudiosWrapper = styled.div`
   mix-blend-mode: hard-light;
   height: 100vh;
   /* margin: 0 25px; */
-  z-index: 0;
+  // z-index: -1;
   position: absolute;
   display: flex;
   align-items: center;
