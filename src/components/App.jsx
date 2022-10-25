@@ -1,0 +1,71 @@
+import React from 'react';
+import '../App.css';
+import '../index.css';
+import DarkModeToggleFunc from './DarkModeToggleFunc.jsx';
+import SunMoon from './SunMoon.jsx';
+import WeAre from './WeAre.jsx';
+import MeetTheTeam from './MeetTheTeam.jsx';
+import Home from './Home.jsx';
+import useDarkMode from 'use-dark-mode';
+import styled from 'styled-components';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+
+export default function Header () {
+  const darkMode = useDarkMode(true);
+  return (
+    <>
+    <Router>
+    <HeaderNav>
+      <Link to="/">go home</Link>
+        <Link to="/team">meet the team</Link>
+        <Link to="/projects">see our projects</Link>
+        <Link to="/follow">follow us</Link>
+      </HeaderNav>
+      <Routes>
+        <Route exact path="/" element={<Home/>} />
+        <Route exact path="/team" element={<MeetTheTeam/>} />
+      </Routes>
+    </Router>
+    </>
+  );
+      
+}
+
+const HeaderNav = styled.nav`
+  display: flex;
+  justify-content: flex-end;
+  a {
+    margin-right: 1em;
+    text-decoration: unset;
+    color: white;
+  }
+`;
+
+// const ScrollContainer = styled.div`
+//   scroll-snap-type: y proximity;
+//   /* height: 100%; */
+//   scroll-snap-points-y: repeat(100vh);
+//   /* overflow: scroll; */
+// `;
+
+const FixedPosition = styled.div`
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+/* scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 300vh;
+  overflow-x: hidden; */
+  // scroll-snap-points-y: repeat(1zx00vh);
+`;
+
+const FirstView = styled.div`
+  height: 100vh;
+  scroll-snap-align: start;
+`;
+// const SecondView = styled(FirstView)``;

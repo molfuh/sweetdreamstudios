@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import MeetTheTeam from './components/MeetTheTeam.jsx';
-import App from './components/App.js';
+import App from './components/App.jsx';
 import reportWebVitals from './reportWebVitals';
 // import { render } from "react-dom";
 

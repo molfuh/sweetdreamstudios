@@ -7,16 +7,16 @@ import {
   Link
 } from "react-router-dom";
 import MeetTheTeam from './MeetTheTeam.jsx';
-import App from './App.js';
+import App from './App.jsx';
 
 export default function Header ({darkMode}) {
   return (
     <HeaderStyle>
       <nav>
         <Link to="/">go home</Link>
-        <a>meet the team</a>
-        <a>see our projects</a>
-        <a>follow us</a>
+        <Link to="/team">meet the team</Link>
+        <Link to="/projects">see our projects</Link>
+        <Link to="/follow">follow us</Link>
       </nav>
     {/* <Routes> */}
     {/* <Route path="/" element={<App />}> */}
@@ -45,8 +45,17 @@ const HeaderStyle = styled.div`
     display: flex;
     justify-content: flex-end;
     a {
-        min-width: 25%;
+        // min-width: 25%;
+        // display: flex;
+        // justify-content: center;
+          margin-right: 1em;
+          text-decoration: unset;
+          color: white;
+    }
+    nav {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
+        /* height: 6vw; */
+        /* position: absolute; */
     }
 `;

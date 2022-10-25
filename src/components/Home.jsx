@@ -4,9 +4,9 @@ import '../index.css';
 import DarkModeToggleFunc from './DarkModeToggleFunc.jsx';
 import SunMoon from './SunMoon.jsx';
 import WeAre from './WeAre.jsx';
-import Header from './Header.jsx';
+// import Header from './Header.jsx';
 import MeetTheTeam from './MeetTheTeam.jsx';
-import Home from './Home.jsx';
+// import Home from './Home.jsx';
 import useDarkMode from 'use-dark-mode';
 import styled from 'styled-components';
 import {
@@ -17,13 +17,13 @@ import {
 } from "react-router-dom";
 
 
-export default function App () {
+export default function Home () {
 const darkMode = useDarkMode(true);
 return (
    <>
       <DarkModeToggleFunc darkMode={darkMode}/>
       <FixedPosition>
-        <Header darkMode={darkMode}/>
+        {/* <Header darkMode={darkMode}/> */}
         <SunMoon darkMode={darkMode}/>
       </FixedPosition>
         <FirstView>
