@@ -7,7 +7,12 @@ import Home from './Home.jsx';
 export default function MeetTheTeam ({darkMode}) {
   return (
     <>
-      <Home/>
+      {/* <Home/> */}
+      <DarkModeToggleFunc darkMode={darkMode}/>
+      {/* <FixedPosition> */}
+     {/* <Header darkMode={darkMode}/> */}
+     {/* <SunMoon darkMode={darkMode}/> */}
+      {/* </FixedPosition> */}
     </>
   );
 };

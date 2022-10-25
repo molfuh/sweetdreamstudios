@@ -27,8 +27,8 @@ export default function Header () {
         <Link to="/follow">follow us</Link>
       </HeaderNav>
       <Routes>
-        <Route exact path="/" element={<Home/>} />
-        <Route exact path="/team" element={<MeetTheTeam/>} />
+        <Route exact path="/" element={<Home darkMode={darkMode}/>} />
+        <Route exact path="/team" element={<MeetTheTeam darkMode={darkMode}/>} />
       </Routes>
     </Router>
     </>
@@ -39,6 +39,9 @@ export default function Header () {
 const HeaderNav = styled.nav`
   display: flex;
   justify-content: flex-end;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
   a {
     margin-right: 1em;
     text-decoration: unset;
