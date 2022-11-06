@@ -119,10 +119,10 @@ const ShootingStars = keyframes`
 
 const ShootingStar1 = styled.div`
 animation-name: ${ShootingStars};
-animation-duration: 5s;
+animation-duration: 10s;
 border-radius: 50%;
 animation-fill-mode: backwards;
-animation-delay: 3s;
+/* animation-delay: 10s; */
 // animation-delay: ${props =>props.random}%;
 animation-iteration-count: infinite;
 width: 2px;
@@ -133,8 +133,8 @@ background: linear-gradient(to left,#bb91e5 0%,#4047a8 100%);
 `;
 
 const ShootingStar2 = styled(ShootingStar1)`
-  animation-delay: 4s;
-  animation-duration: 3s;
+  animation-delay: 8s;
+  animation-duration: 8s;
   /* bottom: 50%; */
   top: -25%;
 `;
@@ -143,8 +143,8 @@ const ShootingStar3 = styled(ShootingStar1)`
 /* left: 50%; */
 /* margin-left: 20%; */
 top: -50%;
-animation-delay: 2s;
-animation-duration: 3s;
+animation-delay: 14s;
+animation-duration: 9s;
 `;
 
 const PlanetEnter = keyframes`
