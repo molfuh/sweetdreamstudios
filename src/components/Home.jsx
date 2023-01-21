@@ -49,8 +49,8 @@ return (
 }
 
 const HomeBg = styled.div`
-  // background: linear-gradient(to bottom, rgb(0 0 0) 0%, rgb(76 118 170) 7%, rgb(219 185 136) 25%, rgb(227 201 138) 100%);
-  background: linear-gradient(to bottom,rgb(0 0 0) 0%,rgb(76 118 170) 7%,rgb(219 185 136) 25%,rgb(255 255 255) 100%);
+  background: linear-gradient(to bottom, rgb(0 0 0) 0%, rgb(76 118 170) 7%, rgb(219 185 136) 25%, rgb(227 201 138) 100%);
+  // background: linear-gradient(to bottom,rgb(0 0 0) 0%,rgb(76 118 170) 7%,rgb(219 185 136) 25%,rgb(255 255 255) 100%);
   height: 500vh;
 `;
 const HomeBgDark = styled.div`

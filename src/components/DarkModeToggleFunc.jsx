@@ -15,7 +15,7 @@ export default function DarkModeToggleFunc ({darkMode}) {
       {/* <button type="button" onClick={darkMode.disable}>
         ☀
       </button> */}
-      <DarkModeToggle checked={darkMode.value} onChange={darkMode.toggle} className="darkModeToggle"/>
+      <DarkModeToggle checked={!darkMode.value} onChange={darkMode.toggle} className="darkModeToggle"/>
       {/* <button type="button" onClick={darkMode.enable}>
         ☾
       </button> */}

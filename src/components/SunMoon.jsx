@@ -124,7 +124,7 @@ border-radius: 50%;
 animation-fill-mode: backwards;
 animation-delay: 3s;
 // animation-delay: ${props =>props.random}%;
-animation-iteration-count: infinite;
+// animation-iteration-count: infinite;
 width: 2px;
 height:2px;
 position: absolute;
