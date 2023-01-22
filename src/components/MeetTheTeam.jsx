@@ -13,6 +13,7 @@ export default function MeetTheTeam ({darkMode}) {
   {darkMode.value ? 
   <>
       <DarkModeToggleFunc darkMode={darkMode}/>
+      <SunMoon darkMode={darkMode}/>
       <MeetOurStarsTitle>Meet Our Stars</MeetOurStarsTitle>
       <PhotoGallery>
         <PhotoImgWrapper>
@@ -38,6 +39,7 @@ export default function MeetTheTeam ({darkMode}) {
     :
     <>
     <DarkModeToggleFunc darkMode={darkMode}/>
+    <SunMoon darkMode={darkMode}/>
     <MeetOurStarsTitle>Meet Our Stars</MeetOurStarsTitle>
     <PhotoGallery>
       <PhotoImgWrapper>
@@ -64,6 +66,7 @@ export default function MeetTheTeam ({darkMode}) {
     </>
   );
 };
+
 
 // {/* <DarkModeToggleFunc darkMode={darkMode}/>
 // <FixedPosition>

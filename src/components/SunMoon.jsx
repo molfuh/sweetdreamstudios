@@ -17,6 +17,7 @@ const random = Math.random();
         {
           darkMode.value ? 
           <>
+          <FixedPosition>
             <Stars/>
             {/* <BigShootingStar src={BigStar}/> */}
             <ShootingStarsContainer>
@@ -25,19 +26,33 @@ const random = Math.random();
               <ShootingStar3/>
             </ShootingStarsContainer>
             <MoonImg src={Moon}/>
+            </FixedPosition>
           </> 
           : 
           <>
+            <FixedPosition>
             <Cloud />
             <Cloud2/>
             <Cloud3/>
             <Sun />
+            </FixedPosition>
           </>
         }
     </>
   );
 };
 
+
+const FixedPosition = styled.div`
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+/* scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 300vh;
+  overflow-x: hidden; */
+  // scroll-snap-points-y: repeat(1zx00vh);
+`;
 
 // const Cloud = styled.div`
 //     background-color: white;
