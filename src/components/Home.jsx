@@ -46,6 +46,9 @@ return (
       <FirstView>
         <WeAre darkMode={darkMode} />
       </FirstView>
+      <SecondView>
+          <Mission darkMode={darkMode} />
+        </SecondView>
   </HomeBg>
 }
     </>
@@ -89,4 +92,7 @@ const FirstView = styled.div`
   scroll-snap-align: start;
 `;
 
-const SecondView = styled(FirstView)``;
+const SecondView = styled(FirstView)`
+  // position: absolute;
+  // top: 100vh;
+`;

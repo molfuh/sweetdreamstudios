@@ -9,8 +9,12 @@ export default function Mission ({darkMode}) {
   return (
     <>
     <MissionStatement>
-      Hello
+      We are Sweet Dream Studios! 
     </MissionStatement>
+      <SocialMediaTitle>Follow us to stay up to date on our projects:
+</SocialMediaTitle>
+    <SocialMedia>
+    </SocialMedia>
     {/* {darkMode.value ?
       <SweetDreamStudiosWrapperDark>
         <SweetDreamStudiosDark>Sweet Dream Studios</SweetDreamStudiosDark>
@@ -32,9 +36,27 @@ export default function Mission ({darkMode}) {
   );
 };
 
-const MissionStatement = styled.span`
-  z-index: 1;
+const SocialMedia = styled.div`
+  display:flex;
 `;
+
+
+const MissionStatement = styled.h2`
+z-index: 1;
+position: absolute;
+font-size: 4em;
+margin-top: 2.5em;
+font-weight: 400;
+`;
+
+const SocialMediaTitle = styled(MissionStatement)`
+  // position: absolute;
+  // z-index: 1;
+  // margin-top: 7.5em;
+  margin-top: 4.5em;
+  // font-size: 2.5em;
+`;
+
 
 // const Logo = styled.div`
 //   position: relative;

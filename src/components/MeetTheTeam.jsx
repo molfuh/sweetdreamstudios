@@ -159,21 +159,24 @@ const MeetOurStarsTitleDark = styled(MeetOurStarsTitle)`
 
 const PhotoGallery = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+  padding: 0 1.5em;
 }
 `;
 
 const PhotoImgWrapper = styled.div`
 position: relative;
 /* overflow: hidden; */
-padding-bottom: 20%;
-height: 0;
+// padding-bottom: 20%;
+height: 250px;
 width: 200px;
 // height: 250px;
 // padding: 0.5em;
 // background-color: #d3b456;
 border-radius: 50%;
 display: flex;
+
 justify-content: center;
 align-items: center;
 border: 6px solid #d3b456;
@@ -210,7 +213,7 @@ position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    // height: 100%;
 `;
 
 
@@ -220,7 +223,7 @@ position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 250px;
 // width: 200px;
 // height: 250px;
 border-radius: 50%;
