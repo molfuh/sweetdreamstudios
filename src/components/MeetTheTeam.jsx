@@ -99,35 +99,44 @@ const PhotoGallery = styled.div`
 `;
 
 const PhotoImgWrapper = styled.div`
-max-width: 220px;
-max-height: 265px;
-padding: 0.5em;
-background-color: #d3b456;
+width: 200px;
+height: 250px;
+// padding: 0.5em;
+// background-color: #d3b456;
 border-radius: 50%;
 display: flex;
+justify-content: center;
 align-items: center;
+border: 6px solid #d3b456;
+// transition: backdrop-filter 1s;
+z-index:1;
+transition: opacity 0.2s, backdrop-filter 0.1s;
 &:hover div {
   opacity: 1;
   backdrop-filter: blur(6px);
+}
 `;
 
 const AboutMe = styled.div`
 position: absolute;
 text-align: center;
 border-radius: 50%;
-max-width: 200px;
+// max-width: 200px;
 /* background-color: black; */
 -webkit-transition: opacity 0.3s;
 transition: opacity 0.3s;
 /* filter: blur(10px); */
 display: flex;
 opacity:0;
-height: 36%;
+// height: 36%;
+user-select: none;
 align-items: center;
-width: 100%;
+// width: 100%;
+width: 200px;
+height: 250px;
 justify-content: center;
 color: white;
-transition: opacity 0.3s;
+transition: opacity 0.2s, backdrop-filter 0.1s;
 `;
 
 
@@ -137,9 +146,12 @@ width: 200px;
 height: 250px;
 border-radius: 50%;
 object-fit: cover;
+z-index: 0;
 transition: filter 0.5s;
 &:hover {
-  filter: unset;
+  // filter: unset;
+  // backdrop-filter: blur(6px);
+  filter: blur(6px);
 }
 `;
 
