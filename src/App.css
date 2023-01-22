@@ -15,6 +15,8 @@ body.light-mode {
   /* background: linear-gradient(to bottom, rgb(173 125 118) 0%, rgb(205 143 119) 50%, rgb(219 185 136) 100%) */
   /* background: linear-gradient(to bottom, rgb(0 0 0) 0%, rgb(76 118 170) 7%, rgb(219 185 136) 25%, rgb(227 201 138) 100%); */
   background: white;
+  /* background-image: url('./components/Cloud.png'); */
+  color: #000;
 }
 
 body.dark-mode {
@@ -22,6 +24,8 @@ body.dark-mode {
   /* background: linear-gradient(to bottom, rgb(0 0 0) 0%, rgb(7, 18, 67) 15%, rgb(3, 22, 104) 50%, rgb(3, 22, 104) 100%); */
   /* background: linear-gradient(to bottom, rgb(0 0 0) 0%, rgb(7, 18, 67) 8%, rgb(29 15 63) 20%, rgb(5 4 8) 60%, rgb(0 0 0) 100%); */
   background: black;
+  background-image: url('./components/stars.png');
+  color: #fff;
 }
 
 .material-icons {

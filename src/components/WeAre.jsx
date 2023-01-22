@@ -1,31 +1,74 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import SDSLogoImg from './Sweet_Dream_Studios_Final20.png';
+import LogoBg from './Background.png';
+import BigStar from './Bigstar.png';
+
 
 export default function WeAre ({darkMode}) {
   return (
     <>
     {darkMode.value ?
       <SweetDreamStudiosWrapperDark>
-        {/* <Intro>we are</Intro> */}
         <SweetDreamStudiosDark>Sweet Dream Studios</SweetDreamStudiosDark>
-        <SDSLogo src={SDSLogoImg}/>
+        <Logo>
+          <SDSLogo src={LogoBg}/>
+          <BigShootingStar src={BigStar}/>
+        </Logo>
       </SweetDreamStudiosWrapperDark>
     :
     <SweetDreamStudiosWrapper>
-      {/* <Intro>we are</Intro> */}
       <SweetDreamStudios>Sweet Dream Studios</SweetDreamStudios>
-      <SDSLogo src={SDSLogoImg}/>
-    </SweetDreamStudiosWrapper>
+      <LogoDark>
+          <SDSLogo src={LogoBg}/>
+          <BigShootingStar src={BigStar}/>
+        </LogoDark>
+      </SweetDreamStudiosWrapper>
     }
     </>
   );
 };
 
+const Logo = styled.div`
+  position: relative;
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  max-width: 450px;
+  max-height: 425px;
+  mix-blend-mode: lighten;
+`;
+
+const LogoDark = styled(Logo)`
+  mix-blend-mode: normal;
+`;
+
+const BigShootingStarAnimation = keyframes`
+0%
+{
+    transform: translate(100%, -100%);
+}
+100%
+{
+    transform: translate(0,0);
+}
+`;
+
+
+const BigShootingStar = styled.img`
+position: absolute;
+animation-name: ${BigShootingStarAnimation};
+animation-duration: 3s;
+animation-delay: 1s;
+width: 100%;
+margin-left: -20px;
+animation-fill-mode: backwards;
+`;
+
 const SDSLogo = styled.img`
   height: 45vw;
   /* margin-left: -40px; */
-  width: 50vw;
+  // width: 50vw;
   max-width: 450px;
   max-height: 425px;
 `;
@@ -34,7 +77,7 @@ const SweetDreamStudiosWrapper = styled.div`
   user-select: none;
   width: min-content;
   color: #0a143dbf;
-  mix-blend-mode: hard-light;
+  // mix-blend-mode: hard-light;
   height: 100vh;
   /* margin: 0 25px; */
   // z-index: -1;
@@ -47,10 +90,10 @@ const SweetDreamStudiosWrapper = styled.div`
 `;
 
 const SweetDreamStudiosWrapperDark = styled(SweetDreamStudiosWrapper)`
-  color: #fff;
+  color: #5f4b8a;
   // mix-blend-mode: difference;
   // mix-blend-mode: unset;
-  mix-blend-mode: exclusion;
+  // mix-blend-mode: lighten;
 `;
 
 // const Intro = styled.div`
@@ -59,9 +102,16 @@ const SweetDreamStudiosWrapperDark = styled(SweetDreamStudiosWrapper)`
 //   // z-index: 1;
 // `;
 
-const SweetDreamStudios = styled.div`
-  position: relative;
+const SweetDreamStudios = styled.h1`
+  // position: relative;
+  font-weight: 400;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
   font-size: 15vw;
+  // background-image: linear-gradient(#ffec8c 33%,#384d89 66%);
+  background-image: linear-gradient(#d3b456 33%, #bc8ae3 66%);
   width: min-content;
   @media (min-width: 768px) {
     font-size: 8em;
@@ -73,5 +123,6 @@ const SweetDreamStudiosDark = styled(SweetDreamStudios)`
   // position: relative;
   // font-size: 15vw;
   // z-index: 1;
-  mix-blend-mode: multiply;
+  // mix-blend-mode: multiply;
+  background-image: linear-gradient(#bc8ae3 33%, #d3b456 66%);
 `;

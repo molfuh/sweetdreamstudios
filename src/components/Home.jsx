@@ -4,6 +4,7 @@ import '../index.css';
 import DarkModeToggleFunc from './DarkModeToggleFunc.jsx';
 import SunMoon from './SunMoon.jsx';
 import WeAre from './WeAre.jsx';
+import Mission from './Mission.jsx';
 // import Header from './Header.jsx';
 import MeetTheTeam from './MeetTheTeam.jsx';
 // import Home from './Home.jsx';
@@ -31,6 +32,9 @@ return (
         <FirstView>
           <WeAre darkMode={darkMode} />
         </FirstView>
+        <SecondView>
+          <Mission darkMode={darkMode} />
+        </SecondView>
     </HomeBgDark>
     :
     <HomeBg>
@@ -49,12 +53,12 @@ return (
 }
 
 const HomeBg = styled.div`
-  background: linear-gradient(to bottom, rgb(0 0 0) 0%, rgb(76 118 170) 7%, rgb(219 185 136) 25%, rgb(227 201 138) 100%);
-  // background: linear-gradient(to bottom,rgb(0 0 0) 0%,rgb(76 118 170) 7%,rgb(219 185 136) 25%,rgb(255 255 255) 100%);
+  background: linear-gradient(to bottom,rgb(76 118 170) 0%,rgb(219 185 136) 100%);
   height: 500vh;
 `;
 const HomeBgDark = styled.div`
-  background: linear-gradient(to bottom, rgb(0 0 0) 0%, rgb(7, 18, 67) 8%, rgb(29 15 63) 20%, rgb(5 4 8) 60%, rgb(0 0 0) 100%);
+  // background: linear-gradient(to bottom, rgb(0 0 0) 0%, rgb(7, 18, 67) 8%, rgb(29 15 63) 20%, rgb(5 4 8) 60%, rgb(0 0 0) 100%);
+  background: linear-gradient(to bottom,#060f38 0%,rgb(0 0 0) 100%);
   height: 500vh;
 `;
 
@@ -85,3 +89,5 @@ const FirstView = styled.div`
   height: 100vh;
   scroll-snap-align: start;
 `;
+
+const SecondView = styled(FirstView)``;

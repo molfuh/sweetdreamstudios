@@ -19,24 +19,40 @@ export default function Header () {
   const darkMode = useDarkMode(true);
   return (
     <>
+    {darkMode.value ? 
+    <Router>
+    <HeaderNavDark>
+      <Link to="/">go home</Link>
+        <Link to="/team">meet the team</Link>
+        <Link to="/projects">see our projects</Link>
+        {/* <Link to="/follow">follow us</Link> */}
+      </HeaderNavDark>
+      <Routes>
+        <Route exact path="/" element={<Home darkMode={darkMode}/>} />
+        <Route exact path="/team" element={<MeetTheTeam darkMode={darkMode}/>} />
+      </Routes>
+    </Router>
+    :
     <Router>
     <HeaderNav>
       <Link to="/">go home</Link>
         <Link to="/team">meet the team</Link>
         <Link to="/projects">see our projects</Link>
-        <Link to="/follow">follow us</Link>
+        {/* <Link to="/follow">follow us</Link> */}
       </HeaderNav>
       <Routes>
         <Route exact path="/" element={<Home darkMode={darkMode}/>} />
         <Route exact path="/team" element={<MeetTheTeam darkMode={darkMode}/>} />
       </Routes>
     </Router>
+}
     </>
   );
       
 }
 
 const HeaderNav = styled.nav`
+  top: 0;
   display: flex;
   justify-content: flex-end;
   position: fixed;
@@ -45,6 +61,11 @@ const HeaderNav = styled.nav`
   a {
     margin-right: 1em;
     text-decoration: unset;
+    color: black;
+  }
+`;
+const HeaderNavDark = styled(HeaderNav)`
+  a {
     color: white;
   }
 `;
