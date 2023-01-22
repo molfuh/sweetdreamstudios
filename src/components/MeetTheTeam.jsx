@@ -6,6 +6,8 @@ import Home from './Home.jsx';
 import Photo1 from './Jared.png';
 import Photo2 from './Steven.png';
 import Photo3 from './Laura.png';
+import Photo4 from './Thomas.png';
+import Photo5 from './Molly.png';
 
 export default function MeetTheTeam ({darkMode}) {
   return (
@@ -14,7 +16,9 @@ export default function MeetTheTeam ({darkMode}) {
   <>
       <DarkModeToggleFunc darkMode={darkMode}/>
       <SunMoon darkMode={darkMode}/>
-      <MeetOurStarsTitle>Meet Our Stars</MeetOurStarsTitle>
+      <MeetOurStarsTitleWrapper>
+        <MeetOurStarsTitleDark>Meet Our Stars</MeetOurStarsTitleDark>
+      </MeetOurStarsTitleWrapper>
       <PhotoGallery>
         <PhotoImgWrapper>
         <PhotoImgDark src={Photo1}/>
@@ -34,13 +38,27 @@ export default function MeetTheTeam ({darkMode}) {
           Laura Willoughby <br/> She/Her <br/> Graphic Designer
           </AboutMe>
         </PhotoImgWrapper>
+        <PhotoImgWrapper>
+        <PhotoImgDark src={Photo4}/>
+          <AboutMe>
+          Thomas Ravago <br/> He/Him <br/> Composer / Sound Designer
+          </AboutMe>
+        </PhotoImgWrapper>
+        <PhotoImgWrapper>
+        <PhotoImgDark src={Photo5}/>
+          <AboutMe>
+          Molly Fuhrman <br/> She/Her <br/> Game Developer
+          </AboutMe>
+        </PhotoImgWrapper>
       </PhotoGallery>
       </>
     :
     <>
     <DarkModeToggleFunc darkMode={darkMode}/>
     <SunMoon darkMode={darkMode}/>
-    <MeetOurStarsTitle>Meet Our Stars</MeetOurStarsTitle>
+    <MeetOurStarsTitleWrapper>
+      <MeetOurStarsTitle>Meet Our Stars</MeetOurStarsTitle>
+    </MeetOurStarsTitleWrapper>
     <PhotoGallery>
       <PhotoImgWrapper>
       <PhotoImg src={Photo1}/>
@@ -60,6 +78,18 @@ export default function MeetTheTeam ({darkMode}) {
         Laura Willoughby <br/> She/Her <br/> Graphic Designer
         </AboutMe>
       </PhotoImgWrapper>
+      <PhotoImgWrapper>
+        <PhotoImg src={Photo4}/>
+          <AboutMe>
+          Thomas Ravago <br/> He/Him <br/> Composer / Sound Designer
+          </AboutMe>
+        </PhotoImgWrapper>
+        <PhotoImgWrapper>
+        <PhotoImg src={Photo5}/>
+          <AboutMe>
+          Molly Fuhrman <br/> She/Her <br/> Game Developer
+          </AboutMe>
+        </PhotoImgWrapper>
     </PhotoGallery>
     </>
 }
@@ -78,19 +108,54 @@ export default function MeetTheTeam ({darkMode}) {
 //   display: flex;
 // `;
 
+const MeetOurStarsTitleWrapper = styled.div`
+  user-select: none;
+  // width: min-content;
+  // color: #0a143dbf;
+  // mix-blend-mode: hard-light;
+  // height: 100vh;
+  /* margin: 0 25px; */
+  // z-index: -1;
+  // position: absolute;
+  display: flex;
+  height: 50vh;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  // scroll-snap-align: center;
+`;
+
 const MeetOurStarsTitle = styled.h1`
     user-select: none;
-    width: min-content;
+    // width: min-content;
     // height: 100vh;
     // position: absolute;
     display: flex;
-    width: 100vw;
+    margin: 0;
+    width: auto;
+    display: flex;
+    // width: 100vw;
     font-weight: 400;
+    font-size: 15vw;
+    /* z-index: 8; */
+    position: relative;
+    font-weight: 400;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    // -moz-background-clip: text;
+    // background-image: linear-gradient(#d3b456 33%, #bc8ae3 66%);
+    color: #d3b456;
+
   @media (min-width: 768px) {
     font-size: 8em;
   }
   // z-index: 1;
 `;
+
+const MeetOurStarsTitleDark = styled(MeetOurStarsTitle)`
+  // background-image: linear-gradient(#bc8ae3 33%, #d3b456 66%);
+  color: #bc8ae3;
+  `;
 
 const PhotoGallery = styled.div`
   display: flex;
@@ -99,8 +164,12 @@ const PhotoGallery = styled.div`
 `;
 
 const PhotoImgWrapper = styled.div`
+position: relative;
+/* overflow: hidden; */
+padding-bottom: 20%;
+height: 0;
 width: 200px;
-height: 250px;
+// height: 250px;
 // padding: 0.5em;
 // background-color: #d3b456;
 border-radius: 50%;
@@ -137,15 +206,25 @@ height: 250px;
 justify-content: center;
 color: white;
 transition: opacity 0.2s, backdrop-filter 0.1s;
+position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 `;
 
 
 
 const PhotoImg = styled.img`
-width: 200px;
-height: 250px;
+position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+// width: 200px;
+// height: 250px;
 border-radius: 50%;
-object-fit: cover;
+// object-fit: cover;
 z-index: 0;
 transition: filter 0.5s;
 &:hover {

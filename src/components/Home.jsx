@@ -54,12 +54,11 @@ return (
 
 const HomeBg = styled.div`
   background: linear-gradient(to bottom,rgb(76 118 170) 0%,rgb(219 185 136) 100%);
-  height: 500vh;
+  height: 200vh;
 `;
-const HomeBgDark = styled.div`
+const HomeBgDark = styled(HomeBg)`
   // background: linear-gradient(to bottom, rgb(0 0 0) 0%, rgb(7, 18, 67) 8%, rgb(29 15 63) 20%, rgb(5 4 8) 60%, rgb(0 0 0) 100%);
   background: linear-gradient(to bottom,#060f38 0%,rgb(0 0 0) 100%);
-  height: 500vh;
 `;
 
 // .light-mode {

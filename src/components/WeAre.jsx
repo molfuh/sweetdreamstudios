@@ -111,7 +111,7 @@ const SweetDreamStudios = styled.h1`
   -moz-text-fill-color: transparent;
   font-size: 15vw;
   // background-image: linear-gradient(#ffec8c 33%,#384d89 66%);
-  background-image: linear-gradient(#d3b456 33%, #bc8ae3 66%);
+  background-image: linear-gradient(#bc8ae3 33%, #d3b456 66%);
   width: min-content;
   @media (min-width: 768px) {
     font-size: 8em;
@@ -124,5 +124,5 @@ const SweetDreamStudiosDark = styled(SweetDreamStudios)`
   // font-size: 15vw;
   // z-index: 1;
   // mix-blend-mode: multiply;
-  background-image: linear-gradient(#bc8ae3 33%, #d3b456 66%);
+  background-image: linear-gradient(#d3b456 33%, #bc8ae3 66%);
 `;

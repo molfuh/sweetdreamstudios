@@ -22,9 +22,9 @@ export default function Header () {
     {darkMode.value ? 
     <Router>
     <HeaderNavDark>
-      <Link to="/">go home</Link>
-        <Link to="/team">meet the team</Link>
-        <Link to="/projects">see our projects</Link>
+      <Link to="/">Home</Link>
+        <Link to="/team">Meet the Team</Link>
+        <Link to="/projects">See Our Projects</Link>
         {/* <Link to="/follow">follow us</Link> */}
       </HeaderNavDark>
       <Routes>
@@ -35,9 +35,9 @@ export default function Header () {
     :
     <Router>
     <HeaderNav>
-      <Link to="/">go home</Link>
-        <Link to="/team">meet the team</Link>
-        <Link to="/projects">see our projects</Link>
+      <Link to="/">Home</Link>
+        <Link to="/team">Meet the Team</Link>
+        <Link to="/projects">See Our Projects</Link>
         {/* <Link to="/follow">follow us</Link> */}
       </HeaderNav>
       <Routes>
@@ -56,12 +56,15 @@ const HeaderNav = styled.nav`
   display: flex;
   justify-content: flex-end;
   position: fixed;
-  width: 100%;
+  width: 98%;
   z-index: 3;
+  height: 6vh;
+  align-items: center;
   a {
-    margin-right: 1em;
+    margin-left: 2em;
     text-decoration: unset;
     color: black;
+    font-size: 1.25em;
   }
 `;
 const HeaderNavDark = styled(HeaderNav)`
@@ -83,7 +86,7 @@ const FixedPosition = styled.div`
   height: 100vh;
 /* scroll-snap-type: y mandatory;
   overflow-y: scroll;
-  height: 300vh;
+  height: 100vh;
   overflow-x: hidden; */
   // scroll-snap-points-y: repeat(1zx00vh);
 `;
