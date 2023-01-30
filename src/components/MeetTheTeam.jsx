@@ -136,7 +136,8 @@ const MeetOurStarsTitle = styled.h1`
     display: flex;
     // width: 100vw;
     font-weight: 400;
-    font-size: 15vw;
+    // font-size: 15vw;
+    font-size: 7.5em;
     /* z-index: 8; */
     position: relative;
     font-weight: 400;
@@ -145,6 +146,10 @@ const MeetOurStarsTitle = styled.h1`
     // -moz-background-clip: text;
     // background-image: linear-gradient(#d3b456 33%, #bc8ae3 66%);
     color: #d3b456;
+        -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(#d3b456 33%,#bc8ae3 66%);
+}
 
   @media (min-width: 768px) {
     font-size: 8em;
@@ -202,6 +207,7 @@ display: flex;
 opacity:0;
 // height: 36%;
 user-select: none;
+font-size: 1.5em;
 align-items: center;
 // width: 100%;
 width: 200px;
