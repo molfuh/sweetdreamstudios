@@ -87,7 +87,7 @@ export default function MeetTheTeam ({darkMode}) {
         <PhotoImgWrapper>
         <PhotoImg src={Photo5}/>
           <AboutMe>
-          Molly Fuhrman <br/> She/Her <br/> Game Developer
+          Molly Fuhrman <br/> She/Her <br/> Game / Website Developer
           </AboutMe>
         </PhotoImgWrapper>
     </PhotoGallery>
