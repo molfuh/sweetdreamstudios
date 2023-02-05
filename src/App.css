@@ -30,6 +30,15 @@ body.dark-mode {
   color: #fff;
   background: linear-gradient(to bottom,#060f38 0%,rgb(0 0 0) 100%);
 }
+/* 
+ .TeamMemberWrapper:not(.TeamMemberWrapper:nth-child(3), TeamMemberWrapper:nth-child(4), .TeamMemberWrapper:nth-child(5), TeamMemberWrapper:nth-child(6)) {
+     flex: 33%;
+   }
+  
+   .TeamMemberWrapper:nth-child(3), TeamMemberWrapper:nth-child(4), .TeamMemberWrapper:nth-child(5), TeamMemberWrapper:nth-child(6) {
+     flex: 25%;
+} */
+  
 
 .material-icons {
   font-family: 'Material Icons';

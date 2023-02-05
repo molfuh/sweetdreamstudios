@@ -3,13 +3,121 @@ import styled from 'styled-components';
 import DarkModeToggleFunc from './DarkModeToggleFunc.jsx';
 import SunMoon from './SunMoon.jsx';
 import Home from './Home.jsx';
-import Photo1 from './Jared.png';
-import Photo2 from './Steven.png';
-import Photo3 from './Laura.png';
-import Photo4 from './Thomas.png';
-import Photo5 from './Molly.png';
+import JaredImg from '../headshots/Jared.png';
+import StevenImg from '../headshots/Steven.png';
+import LauraImg from '../headshots/Laura.png';
+import ThomasImg from '../headshots/Thomas.png';
+import MollyImg from '../headshots/Molly.png';
+import AndyImg from '../headshots/Andy.jpg';
+import PaulinaImg from '../headshots/Paulina.jpg';
+import KedricImg from '../headshots/Kedric.jpg';
+import MattImg from '../headshots/Matt.jpg';
 
 export default function MeetTheTeam ({darkMode}) {
+
+
+//   let projectTitles=['INT Magazine','Meditative Musical Drum','Positively TEDIOUS','Resume','title 4','title 5'];
+// let projectTitlesList=[];
+// projectTitles.forEach((title,index)=>{
+//     projectTitlesList.push( <Num key={index}><span>{title}</span></Num>)
+// })
+// let projectDescription=['Online magazine highlighting creative themes and topics',
+// 'Minimum viable product for phone app to create self-designed meditative music (mobile only)','Portfolio website for new musician TEDIOUS to showcase important artist information','(Includes hidden surprise behind draggable logo!)','description 4','description 5'];
+// let projectDescriptionList=[];
+// projectDescription.forEach((description,index)=>{
+//     projectDescriptionList.push( <Num key={index}><span>{description}</span></Num>)
+// })
+// let projectURL=['https://www.intmagazine.com/',
+// 'https://meditativemusicaldrum.netlify.app/','https://positivelytedious.com/',Resume,'URL 4','URL 5'];
+// let projectURLList=[];
+// projectURL.forEach((URL,index)=>{
+//     projectURLList.push( <Num key={index}><ProjectLink href={URL} target="_blank" rel="noreferrer">Click here to view!</ProjectLink></Num>)
+// })
+// function ProjectListComponent() {
+//   return (
+//     <>
+//       <ListContainer>
+//         <Num>
+//             <Title>{' // Projects ' }</Title>
+//         </Num>
+//         <Num/>
+//         {projectTitlesList[0]}
+//         {projectDescriptionList[0]}
+//         {projectURLList[0]}
+//         <Num/>
+//         {projectTitlesList[2]}
+//         {projectDescriptionList[2]}
+//         {projectDescriptionList[3]}
+//         {projectURLList[2]}
+//         <Num/>
+//         {projectTitlesList[1]}
+//         {projectDescriptionList[1]}
+//         {projectURLList[1]}
+//         <Num/>
+//         {projectTitlesList[3]}
+//         {projectURLList[3]}
+//         <Num/>
+//       </ListContainer>
+
+
+let People = {
+  Paulina: {
+    Name: 'Paulina Ramirez',
+    Pronouns: 'She/Her',
+    Role: 'CEO / Video Game Director',
+    Photo: PaulinaImg
+  },
+  Steven: {
+    Name: 'Steven Carrasquel',
+    Pronouns: 'He/Him',
+    Role: 'COO / Director of Marketing',
+    Photo: StevenImg
+  },
+  Kedric: {
+    Name: 'Kedric Tayag',
+    Pronouns: 'He/Him',
+    Role: 'Game Artist',
+    Photo: KedricImg
+  },
+  Laura: {
+    Name: 'Laura Willoughby',
+    Pronouns: 'She/Her',
+    Role: 'Graphic Designer',
+    Photo: LauraImg
+  },
+  Andy: {
+    Name: 'Andy Clark',
+    Pronouns: 'He/Him',
+    Role: 'Music Director',
+    Photo: AndyImg
+  },
+  Thomas: {
+    Name: 'Thomas Ravago',
+    Pronouns: 'He/Him',
+    Role: 'Music Composer',
+    Photo: ThomasImg
+  },
+  Molly: {
+    Name: 'Molly Fuhrman',
+    Pronouns: 'She/Her',
+    Role: 'Website / Game Developer',
+    Photo: MollyImg
+  },
+  Jared: {
+    Name: 'Jared Keffer',
+    Pronouns: 'He/Him',
+    Role: 'Game Developer',
+    Photo: JaredImg
+  },
+  Matt: {
+    Name: 'Matt Breuer',
+    Pronouns: 'He/Him',
+    Role: 'Writer',
+    Photo: MattImg
+  }
+
+
+}
   return (
     <>
   {darkMode.value ? 
@@ -19,38 +127,83 @@ export default function MeetTheTeam ({darkMode}) {
       <MeetOurStarsTitleWrapper>
         <MeetOurStarsTitleDark>Meet Our Stars</MeetOurStarsTitleDark>
       </MeetOurStarsTitleWrapper>
+      <PhotoGalleryWrapper>
       <PhotoGallery>
-        <PhotoImgWrapper>
-        <PhotoImgDark src={Photo1}/>
+        <TeamMemberWrapper>
+      <PhotoImgWrapper>
+        <PhotoImgDark src={People.Paulina.Photo}/>
           <AboutMe>
-          Jared Keffer <br/> He/Him <br/> Game Developer
+          {People.Paulina.Name} <br/> {People.Paulina.Pronouns} <br/> {People.Paulina.Role}
           </AboutMe>
         </PhotoImgWrapper>
+        </TeamMemberWrapper>
+        <TeamMemberWrapper>
         <PhotoImgWrapper>
-        <PhotoImgDark src={Photo2}/>
+        <PhotoImgDark src={People.Steven.Photo}/>
           <AboutMe>
-          Steven Carrasquel <br/> He/Him <br/> COO / Director of Marketing
+          {People.Steven.Name} <br/> {People.Steven.Pronouns} <br/> {People.Steven.Role}
           </AboutMe>
         </PhotoImgWrapper>
+        </TeamMemberWrapper>
+        <TeamMemberWrapper>
         <PhotoImgWrapper>
-        <PhotoImgDark src={Photo3}/>
+        <PhotoImgDark src={People.Kedric.Photo}/>
           <AboutMe>
-          Laura Willoughby <br/> She/Her <br/> Graphic Designer
+          {People.Kedric.Name} <br/> {People.Kedric.Pronouns} <br/> {People.Kedric.Role}
           </AboutMe>
         </PhotoImgWrapper>
+        </TeamMemberWrapper>
+        <TeamMemberWrapper>
         <PhotoImgWrapper>
-        <PhotoImgDark src={Photo4}/>
-          <AboutMe>
-          Thomas Ravago <br/> He/Him <br/> Composer / Sound Designer
-          </AboutMe>
-        </PhotoImgWrapper>
-        <PhotoImgWrapper>
-        <PhotoImgDark src={Photo5}/>
-          <AboutMe>
-          Molly Fuhrman <br/> She/Her <br/> Game Developer
-          </AboutMe>
-        </PhotoImgWrapper>
+                <PhotoImgDark src={People.Laura.Photo}/>
+                <AboutMe>
+                {People.Laura.Name} <br/> {People.Laura.Pronouns} <br/> {People.Laura.Role}
+                </AboutMe>
+              </PhotoImgWrapper>
+              </TeamMemberWrapper>
+              <TeamMemberWrapper>
+              <PhotoImgWrapper>
+              <PhotoImgDark src={People.Andy.Photo}/>
+              <AboutMe>
+              {People.Andy.Name} <br/> {People.Andy.Pronouns} <br/> {People.Andy.Role}
+              </AboutMe>
+            </PhotoImgWrapper>
+            </TeamMemberWrapper>
+            <TeamMemberWrapper>
+            <PhotoImgWrapper>
+            <PhotoImgDark src={People.Thomas.Photo}/>
+            <AboutMe>
+            {People.Thomas.Name} <br/> {People.Thomas.Pronouns} <br/> {People.Thomas.Role}
+            </AboutMe>
+          </PhotoImgWrapper>
+          </TeamMemberWrapper>
+            <TeamMemberWrapper>
+            <PhotoImgWrapper>
+            <PhotoImgDark src={People.Molly.Photo}/>
+            <AboutMe>
+            {People.Molly.Name} <br/> {People.Molly.Pronouns} <br/> {People.Molly.Role}
+            </AboutMe>
+          </PhotoImgWrapper>
+          </TeamMemberWrapper>
+            <TeamMemberWrapper>
+            <PhotoImgWrapper>
+            <PhotoImgDark src={People.Jared.Photo}/>
+            <AboutMe>
+            {People.Jared.Name} <br/> {People.Jared.Pronouns} <br/> {People.Jared.Role}
+            </AboutMe>
+          </PhotoImgWrapper>
+          </TeamMemberWrapper>
+            <TeamMemberWrapper>
+            <PhotoImgWrapper>
+            <PhotoImgDark src={People.Matt.Photo}/>
+            <AboutMe>
+            {People.Matt.Name} <br/> {People.Matt.Pronouns} <br/> {People.Matt.Role}
+            </AboutMe>
+            {/* </PhotoImgDark> */}
+          </PhotoImgWrapper>
+          </TeamMemberWrapper>
       </PhotoGallery>
+      </PhotoGalleryWrapper>
       </>
     :
     <>
@@ -59,38 +212,110 @@ export default function MeetTheTeam ({darkMode}) {
     <MeetOurStarsTitleWrapper>
       <MeetOurStarsTitle>Meet Our Stars</MeetOurStarsTitle>
     </MeetOurStarsTitleWrapper>
+    <PhotoGalleryWrapper>
     <PhotoGallery>
+        <TeamMemberWrapper>
       <PhotoImgWrapper>
-      <PhotoImg src={Photo1}/>
-        <AboutMe>
-        Jared Keffer <br/> He/Him <br/> Game Developer
-        </AboutMe>
-      </PhotoImgWrapper>
+        <PhotoImg src={People.Paulina.Photo}/>
+          <AboutMe>
+          {People.Paulina.Name} <br/> {People.Paulina.Pronouns} <br/> {People.Paulina.Role}
+          </AboutMe>
+        </PhotoImgWrapper>
+        </TeamMemberWrapper>
+        <TeamMemberWrapper>
+        <PhotoImgWrapper>
+        <PhotoImg src={People.Steven.Photo}/>
+          <AboutMe>
+          {People.Steven.Name} <br/> {People.Steven.Pronouns} <br/> {People.Steven.Role}
+          </AboutMe>
+        </PhotoImgWrapper>
+        </TeamMemberWrapper>
+        <TeamMemberWrapper>
+        <PhotoImgWrapper>
+        <PhotoImg src={People.Kedric.Photo}/>
+          <AboutMe>
+          {People.Kedric.Name} <br/> {People.Kedric.Pronouns} <br/> {People.Kedric.Role}
+          </AboutMe>
+        </PhotoImgWrapper>
+        </TeamMemberWrapper>
+        <TeamMemberWrapper>
+        <PhotoImgWrapper>
+                <PhotoImg src={People.Laura.Photo}/>
+                <AboutMe>
+                {People.Laura.Name} <br/> {People.Laura.Pronouns} <br/> {People.Laura.Role}
+                </AboutMe>
+              </PhotoImgWrapper>
+              </TeamMemberWrapper>
+              <TeamMemberWrapper>
+              <PhotoImgWrapper>
+              <PhotoImg src={People.Andy.Photo}/>
+              <AboutMe>
+              {People.Andy.Name} <br/> {People.Andy.Pronouns} <br/> {People.Andy.Role}
+              </AboutMe>
+            </PhotoImgWrapper>
+            </TeamMemberWrapper>
+            <TeamMemberWrapper>
+            <PhotoImgWrapper>
+            <PhotoImg src={People.Thomas.Photo}/>
+            <AboutMe>
+            {People.Thomas.Name} <br/> {People.Thomas.Pronouns} <br/> {People.Thomas.Role}
+            </AboutMe>
+          </PhotoImgWrapper>
+          </TeamMemberWrapper>
+            <TeamMemberWrapper>
+            <PhotoImgWrapper>
+            <PhotoImg src={People.Molly.Photo}/>
+            <AboutMe>
+            {People.Molly.Name} <br/> {People.Molly.Pronouns} <br/> {People.Molly.Role}
+            </AboutMe>
+          </PhotoImgWrapper>
+          </TeamMemberWrapper>
+            <TeamMemberWrapper>
+            <PhotoImgWrapper>
+            <PhotoImg src={People.Jared.Photo}/>
+            <AboutMe>
+            {People.Jared.Name} <br/> {People.Jared.Pronouns} <br/> {People.Jared.Role}
+            </AboutMe>
+          </PhotoImgWrapper>
+          </TeamMemberWrapper>
+            <TeamMemberWrapper>
+            <PhotoImgWrapper>
+            <PhotoImg/>
+            <AboutMe>
+            {People.Matt.Name} <br/> {People.Matt.Pronouns} <br/> {People.Matt.Role}
+            </AboutMe>
+          </PhotoImgWrapper>
+          </TeamMemberWrapper>
+      </PhotoGallery>
+      {/*
+      <TeamMemberWrapper>
       <PhotoImgWrapper>
-      <PhotoImg src={Photo2}/>
+      <PhotoImg src={StevenImg}/>
         <AboutMe>
         Steven Carrasquel <br/> He/Him <br/> COO / Director of Marketing
         </AboutMe>
       </PhotoImgWrapper>
+      </TeamMemberWrapper>
       <PhotoImgWrapper>
-      <PhotoImg src={Photo3}/>
+      <PhotoImg src={LauraImg}/>
         <AboutMe>
         Laura Willoughby <br/> She/Her <br/> Graphic Designer
         </AboutMe>
       </PhotoImgWrapper>
       <PhotoImgWrapper>
-        <PhotoImg src={Photo4}/>
+        <PhotoImg src={ThomasImg}/>
           <AboutMe>
-          Thomas Ravago <br/> He/Him <br/> Composer / Sound Designer
+          Thomas Ravago <br/> He/Him <br/> Music Composer
           </AboutMe>
         </PhotoImgWrapper>
         <PhotoImgWrapper>
-        <PhotoImg src={Photo5}/>
+        <PhotoImg src={MollyImg}/>
           <AboutMe>
           Molly Fuhrman <br/> She/Her <br/> Game / Website Developer
           </AboutMe>
-        </PhotoImgWrapper>
-    </PhotoGallery>
+        </PhotoImgWrapper> */}
+    {/* </PhotoGallery> */}
+    </PhotoGalleryWrapper>
     </>
 }
     </>
@@ -162,13 +387,34 @@ const MeetOurStarsTitleDark = styled(MeetOurStarsTitle)`
   color: #bc8ae3;
   `;
 
+  const PhotoGalleryWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+  `;
+
 const PhotoGallery = styled.div`
+// max-width: 80%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 0 1.5em;
 }
 `;
+
+const TeamMemberWrapper = styled.div`
+// width: 33%;
+width: 275px;
+// height: 40%;
+display: flex;
+justify-content: center;
+`;
+// .TeamMemberWrapper:not(.TeamMemberWrapper:nth-child(3), TeamMemberWrapper:nth-child(4), .TeamMemberWrapper:nth-child(5), TeamMemberWrapper:nth-child(6)) {
+//   flex: 33%;
+// }
+
+// .TeamMemberWrapper:nth-child(3), TeamMemberWrapper:nth-child(4), .TeamMemberWrapper:nth-child(5), TeamMemberWrapper:nth-child(6) {
+//   flex: 25%;
+// }
 
 const PhotoImgWrapper = styled.div`
 position: relative;
