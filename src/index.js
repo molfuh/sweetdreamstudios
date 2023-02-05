@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+// import './stylesheets/main.scss';
 import MeetTheTeam from './components/MeetTheTeam.jsx';
 import App from './components/App.jsx';
 import reportWebVitals from './reportWebVitals';

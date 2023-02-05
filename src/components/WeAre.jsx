@@ -1,8 +1,11 @@
 import React from 'react';
 import styled, {keyframes} from 'styled-components';
 import SDSLogoImg from './Sweet_Dream_Studios_Final20.png';
-import LogoBg from './Background.png';
-import BigStar from './Bigstar.png';
+// import LogoBg from './Background.png';
+// import BigStar from './Bigstar.png';
+import StarWithTail from './StarWithTail.png';
+import LogoBgWithStars from './Bg_Stars.png';
+import LogoBgWithNoStars from './Bg_noStars.png';
 
 
 export default function WeAre ({darkMode}) {
@@ -12,16 +15,16 @@ export default function WeAre ({darkMode}) {
       <SweetDreamStudiosWrapperDark>
         <SweetDreamStudiosDark>Sweet Dream Studios</SweetDreamStudiosDark>
         <Logo>
-          <SDSLogo src={LogoBg}/>
-          <BigShootingStar src={BigStar}/>
+          <SDSLogo src={LogoBgWithNoStars}/>
+          <BigShootingStar src={StarWithTail}/>
         </Logo>
       </SweetDreamStudiosWrapperDark>
     :
     <SweetDreamStudiosWrapper>
       <SweetDreamStudios>Sweet Dream Studios</SweetDreamStudios>
       <LogoDark>
-          <SDSLogo src={LogoBg}/>
-          <BigShootingStar src={BigStar}/>
+          <SDSLogo src={LogoBgWithStars}/>
+          <BigShootingStar src={StarWithTail}/>
         </LogoDark>
       </SweetDreamStudiosWrapper>
     }
@@ -36,6 +39,7 @@ const Logo = styled.div`
   align-items: center;
   max-width: 450px;
   max-height: 425px;
+  justify-content: center;
   mix-blend-mode: lighten;
 `;
 
@@ -46,7 +50,7 @@ const LogoDark = styled(Logo)`
 const BigShootingStarAnimation = keyframes`
 0%
 {
-    transform: translate(100%, -100%);
+    transform: translate(50vw, -50vh);
 }
 100%
 {
@@ -61,7 +65,7 @@ animation-name: ${BigShootingStarAnimation};
 animation-duration: 3s;
 animation-delay: 1s;
 width: 100%;
-margin-left: -20px;
+// margin-left: -20px;
 animation-fill-mode: backwards;
 `;
 

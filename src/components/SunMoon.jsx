@@ -4,7 +4,8 @@ import React from 'react';
 // import MenuIcon from '@mui/icons-material/MenuIcon';
 // import DarkMode from '@mui/icons-material/DarkMode';
 import styled, {keyframes} from 'styled-components';
-import stars from './stars.png';
+// import stars from './stars.png';
+import stars from './PossibleStarsBg.png';
 import Moon from './Moon.png';
 import BigStar from './Bigstar.png';
 
@@ -72,6 +73,7 @@ const Stars = styled.div`
     width: 100vw;
     position: absolute;
     z-index: -1;
+    background-size: cover;
 `;
 
 const Cloud = styled.div`

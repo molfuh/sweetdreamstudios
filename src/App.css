@@ -1,6 +1,6 @@
 
 body {
-  height: 200vh;
+  /* height: 200vh; */
   width: 100vw;
   font-size: 12px;
   overflow-x: hidden;
@@ -27,6 +27,7 @@ body.dark-mode {
   /* background: linear-gradient(to bottom, rgb(0 0 0) 0%, rgb(7, 18, 67) 8%, rgb(29 15 63) 20%, rgb(5 4 8) 60%, rgb(0 0 0) 100%); */
   background: black;
   background-image: url('./components/stars.png');
+  /* background-image: url('./components/PossibleStarsBg.png'); */
   color: #fff;
   background: linear-gradient(to bottom,#060f38 0%,rgb(0 0 0) 100%);
 }

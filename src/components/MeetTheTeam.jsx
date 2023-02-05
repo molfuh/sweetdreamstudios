@@ -12,10 +12,75 @@ import AndyImg from '../headshots/Andy.jpg';
 import PaulinaImg from '../headshots/Paulina.jpg';
 import KedricImg from '../headshots/Kedric.jpg';
 import MattImg from '../headshots/Matt.jpg';
-
-export default function MeetTheTeam ({darkMode}) {
-
-
+// ({darkMode})
+export default class MeetTheTeam extends React.Component {
+  constructor() {
+    super();
+  this.state = {
+    Pictures: [JaredImg,StevenImg, LauraImg, ThomasImg, MollyImg,AndyImg,PaulinaImg,KedricImg,MattImg],
+    People: {
+      Paulina: {
+        Name: 'Paulina Ramirez',
+        Pronouns: 'She/Her',
+        Role: 'CEO / Video Game Director',
+        Photo: PaulinaImg
+      },
+      Steven: {
+        Name: 'Steven Carrasquel',
+        Pronouns: 'He/Him',
+        Role: 'COO / Director of Marketing',
+        Photo: StevenImg
+      },
+      Kedric: {
+        Name: 'Kedric Tayag',
+        Pronouns: 'He/Him',
+        Role: 'Game Artist',
+        Photo: KedricImg
+      },
+      Laura: {
+        Name: 'Laura Willoughby',
+        Pronouns: 'She/Her',
+        Role: 'Graphic Designer',
+        Photo: LauraImg
+      },
+      Andy: {
+        Name: 'Andy Clark',
+        Pronouns: 'He/Him',
+        Role: 'Music Director',
+        Photo: AndyImg
+      },
+      Thomas: {
+        Name: 'Thomas Ravago',
+        Pronouns: 'He/Him',
+        Role: 'Music Composer',
+        Photo: ThomasImg
+      },
+      Molly: {
+        Name: 'Molly Fuhrman',
+        Pronouns: 'She/Her',
+        Role: 'Website / Game Developer',
+        Photo: MollyImg
+      },
+      Jared: {
+        Name: 'Jared Keffer',
+        Pronouns: 'He/Him',
+        Role: 'Game Developer',
+        Photo: JaredImg
+      },
+      Matt: {
+        Name: 'Matt Breuer',
+        Pronouns: 'He/Him',
+        Role: 'Writer',
+        Photo: MattImg
+      }
+    }
+  }
+}
+  componentDidMount = () => {
+    this.state.Pictures.forEach((picture) => {
+        const img = new Image();
+        img.src = picture.fileName;
+    })};
 //   let projectTitles=['INT Magazine','Meditative Musical Drum','Positively TEDIOUS','Resume','title 4','title 5'];
 // let projectTitlesList=[];
 // projectTitles.forEach((title,index)=>{
@@ -60,70 +125,13 @@ export default function MeetTheTeam ({darkMode}) {
 //       </ListContainer>
 
 
-let People = {
-  Paulina: {
-    Name: 'Paulina Ramirez',
-    Pronouns: 'She/Her',
-    Role: 'CEO / Video Game Director',
-    Photo: PaulinaImg
-  },
-  Steven: {
-    Name: 'Steven Carrasquel',
-    Pronouns: 'He/Him',
-    Role: 'COO / Director of Marketing',
-    Photo: StevenImg
-  },
-  Kedric: {
-    Name: 'Kedric Tayag',
-    Pronouns: 'He/Him',
-    Role: 'Game Artist',
-    Photo: KedricImg
-  },
-  Laura: {
-    Name: 'Laura Willoughby',
-    Pronouns: 'She/Her',
-    Role: 'Graphic Designer',
-    Photo: LauraImg
-  },
-  Andy: {
-    Name: 'Andy Clark',
-    Pronouns: 'He/Him',
-    Role: 'Music Director',
-    Photo: AndyImg
-  },
-  Thomas: {
-    Name: 'Thomas Ravago',
-    Pronouns: 'He/Him',
-    Role: 'Music Composer',
-    Photo: ThomasImg
-  },
-  Molly: {
-    Name: 'Molly Fuhrman',
-    Pronouns: 'She/Her',
-    Role: 'Website / Game Developer',
-    Photo: MollyImg
-  },
-  Jared: {
-    Name: 'Jared Keffer',
-    Pronouns: 'He/Him',
-    Role: 'Game Developer',
-    Photo: JaredImg
-  },
-  Matt: {
-    Name: 'Matt Breuer',
-    Pronouns: 'He/Him',
-    Role: 'Writer',
-    Photo: MattImg
-  }
-
-
-}
+render() {
   return (
     <>
-  {darkMode.value ? 
+  {this.props.darkMode.value ? 
   <>
-      <DarkModeToggleFunc darkMode={darkMode}/>
-      <SunMoon darkMode={darkMode}/>
+      <DarkModeToggleFunc darkMode={this.props.darkMode}/>
+      <SunMoon darkMode={this.props.darkMode}/>
       <MeetOurStarsTitleWrapper>
         <MeetOurStarsTitleDark>Meet Our Stars</MeetOurStarsTitleDark>
       </MeetOurStarsTitleWrapper>
@@ -131,73 +139,73 @@ let People = {
       <PhotoGallery>
         <TeamMemberWrapper>
       <PhotoImgWrapper>
-        <PhotoImgDark src={People.Paulina.Photo}/>
+        <PhotoImgDark src={this.state.People.Paulina.Photo}/>
           <AboutMe>
-          {People.Paulina.Name} <br/> {People.Paulina.Pronouns} <br/> {People.Paulina.Role}
+          {this.state.People.Paulina.Name} <br/> {this.state.People.Paulina.Pronouns} <br/> {this.state.People.Paulina.Role}
           </AboutMe>
         </PhotoImgWrapper>
         </TeamMemberWrapper>
         <TeamMemberWrapper>
         <PhotoImgWrapper>
-        <PhotoImgDark src={People.Steven.Photo}/>
+        <PhotoImgDark src={this.state.People.Steven.Photo}/>
           <AboutMe>
-          {People.Steven.Name} <br/> {People.Steven.Pronouns} <br/> {People.Steven.Role}
+          {this.state.People.Steven.Name} <br/> {this.state.People.Steven.Pronouns} <br/> {this.state.People.Steven.Role}
           </AboutMe>
         </PhotoImgWrapper>
         </TeamMemberWrapper>
         <TeamMemberWrapper>
         <PhotoImgWrapper>
-        <PhotoImgDark src={People.Kedric.Photo}/>
+        <PhotoImgDark src={this.state.People.Kedric.Photo}/>
           <AboutMe>
-          {People.Kedric.Name} <br/> {People.Kedric.Pronouns} <br/> {People.Kedric.Role}
+          {this.state.People.Kedric.Name} <br/> {this.state.People.Kedric.Pronouns} <br/> {this.state.People.Kedric.Role}
           </AboutMe>
         </PhotoImgWrapper>
         </TeamMemberWrapper>
         <TeamMemberWrapper>
         <PhotoImgWrapper>
-                <PhotoImgDark src={People.Laura.Photo}/>
+                <PhotoImgDark src={this.state.People.Laura.Photo}/>
                 <AboutMe>
-                {People.Laura.Name} <br/> {People.Laura.Pronouns} <br/> {People.Laura.Role}
+                {this.state.People.Laura.Name} <br/> {this.state.People.Laura.Pronouns} <br/> {this.state.People.Laura.Role}
                 </AboutMe>
               </PhotoImgWrapper>
               </TeamMemberWrapper>
               <TeamMemberWrapper>
               <PhotoImgWrapper>
-              <PhotoImgDark src={People.Andy.Photo}/>
+              <PhotoImgDark src={this.state.People.Andy.Photo}/>
               <AboutMe>
-              {People.Andy.Name} <br/> {People.Andy.Pronouns} <br/> {People.Andy.Role}
+              {this.state.People.Andy.Name} <br/> {this.state.People.Andy.Pronouns} <br/> {this.state.People.Andy.Role}
               </AboutMe>
             </PhotoImgWrapper>
             </TeamMemberWrapper>
             <TeamMemberWrapper>
             <PhotoImgWrapper>
-            <PhotoImgDark src={People.Thomas.Photo}/>
+            <PhotoImgDark src={this.state.People.Thomas.Photo}/>
             <AboutMe>
-            {People.Thomas.Name} <br/> {People.Thomas.Pronouns} <br/> {People.Thomas.Role}
+            {this.state.People.Thomas.Name} <br/> {this.state.People.Thomas.Pronouns} <br/> {this.state.People.Thomas.Role}
             </AboutMe>
           </PhotoImgWrapper>
           </TeamMemberWrapper>
             <TeamMemberWrapper>
             <PhotoImgWrapper>
-            <PhotoImgDark src={People.Molly.Photo}/>
+            <PhotoImgDark src={this.state.People.Molly.Photo}/>
             <AboutMe>
-            {People.Molly.Name} <br/> {People.Molly.Pronouns} <br/> {People.Molly.Role}
+            {this.state.People.Molly.Name} <br/> {this.state.People.Molly.Pronouns} <br/> {this.state.People.Molly.Role}
             </AboutMe>
           </PhotoImgWrapper>
           </TeamMemberWrapper>
             <TeamMemberWrapper>
             <PhotoImgWrapper>
-            <PhotoImgDark src={People.Jared.Photo}/>
+            <PhotoImgDark src={this.state.People.Jared.Photo}/>
             <AboutMe>
-            {People.Jared.Name} <br/> {People.Jared.Pronouns} <br/> {People.Jared.Role}
+            {this.state.People.Jared.Name} <br/> {this.state.People.Jared.Pronouns} <br/> {this.state.People.Jared.Role}
             </AboutMe>
           </PhotoImgWrapper>
           </TeamMemberWrapper>
             <TeamMemberWrapper>
             <PhotoImgWrapper>
-            <PhotoImgDark src={People.Matt.Photo}/>
+            <PhotoImgDark src={this.state.People.Matt.Photo}/>
             <AboutMe>
-            {People.Matt.Name} <br/> {People.Matt.Pronouns} <br/> {People.Matt.Role}
+            {this.state.People.Matt.Name} <br/> {this.state.People.Matt.Pronouns} <br/> {this.state.People.Matt.Role}
             </AboutMe>
             {/* </PhotoImgDark> */}
           </PhotoImgWrapper>
@@ -207,8 +215,8 @@ let People = {
       </>
     :
     <>
-    <DarkModeToggleFunc darkMode={darkMode}/>
-    <SunMoon darkMode={darkMode}/>
+    <DarkModeToggleFunc darkMode={this.props.darkMode}/>
+    <SunMoon darkMode={this.props.darkMode}/>
     <MeetOurStarsTitleWrapper>
       <MeetOurStarsTitle>Meet Our Stars</MeetOurStarsTitle>
     </MeetOurStarsTitleWrapper>
@@ -216,65 +224,65 @@ let People = {
     <PhotoGallery>
         <TeamMemberWrapper>
       <PhotoImgWrapper>
-        <PhotoImg src={People.Paulina.Photo}/>
+        <PhotoImg src={this.state.People.Paulina.Photo}/>
           <AboutMe>
-          {People.Paulina.Name} <br/> {People.Paulina.Pronouns} <br/> {People.Paulina.Role}
+          {this.state.People.Paulina.Name} <br/> {this.state.People.Paulina.Pronouns} <br/> {this.state.People.Paulina.Role}
           </AboutMe>
         </PhotoImgWrapper>
         </TeamMemberWrapper>
         <TeamMemberWrapper>
         <PhotoImgWrapper>
-        <PhotoImg src={People.Steven.Photo}/>
+        <PhotoImg src={this.state.People.Steven.Photo}/>
           <AboutMe>
-          {People.Steven.Name} <br/> {People.Steven.Pronouns} <br/> {People.Steven.Role}
+          {this.state.People.Steven.Name} <br/> {this.state.People.Steven.Pronouns} <br/> {this.state.People.Steven.Role}
           </AboutMe>
         </PhotoImgWrapper>
         </TeamMemberWrapper>
         <TeamMemberWrapper>
         <PhotoImgWrapper>
-        <PhotoImg src={People.Kedric.Photo}/>
+        <PhotoImg src={this.state.People.Kedric.Photo}/>
           <AboutMe>
-          {People.Kedric.Name} <br/> {People.Kedric.Pronouns} <br/> {People.Kedric.Role}
+          {this.state.People.Kedric.Name} <br/> {this.state.People.Kedric.Pronouns} <br/> {this.state.People.Kedric.Role}
           </AboutMe>
         </PhotoImgWrapper>
         </TeamMemberWrapper>
         <TeamMemberWrapper>
         <PhotoImgWrapper>
-                <PhotoImg src={People.Laura.Photo}/>
+                <PhotoImg src={this.state.People.Laura.Photo}/>
                 <AboutMe>
-                {People.Laura.Name} <br/> {People.Laura.Pronouns} <br/> {People.Laura.Role}
+                {this.state.People.Laura.Name} <br/> {this.state.People.Laura.Pronouns} <br/> {this.state.People.Laura.Role}
                 </AboutMe>
               </PhotoImgWrapper>
               </TeamMemberWrapper>
               <TeamMemberWrapper>
               <PhotoImgWrapper>
-              <PhotoImg src={People.Andy.Photo}/>
+              <PhotoImg src={this.state.People.Andy.Photo}/>
               <AboutMe>
-              {People.Andy.Name} <br/> {People.Andy.Pronouns} <br/> {People.Andy.Role}
+              {this.state.People.Andy.Name} <br/> {this.state.People.Andy.Pronouns} <br/> {this.state.People.Andy.Role}
               </AboutMe>
             </PhotoImgWrapper>
             </TeamMemberWrapper>
             <TeamMemberWrapper>
             <PhotoImgWrapper>
-            <PhotoImg src={People.Thomas.Photo}/>
+            <PhotoImg src={this.state.People.Thomas.Photo}/>
             <AboutMe>
-            {People.Thomas.Name} <br/> {People.Thomas.Pronouns} <br/> {People.Thomas.Role}
+            {this.state.People.Thomas.Name} <br/> {this.state.People.Thomas.Pronouns} <br/> {this.state.People.Thomas.Role}
             </AboutMe>
           </PhotoImgWrapper>
           </TeamMemberWrapper>
             <TeamMemberWrapper>
             <PhotoImgWrapper>
-            <PhotoImg src={People.Molly.Photo}/>
+            <PhotoImg src={this.state.People.Molly.Photo}/>
             <AboutMe>
-            {People.Molly.Name} <br/> {People.Molly.Pronouns} <br/> {People.Molly.Role}
+            {this.state.People.Molly.Name} <br/> {this.state.People.Molly.Pronouns} <br/> {this.state.People.Molly.Role}
             </AboutMe>
           </PhotoImgWrapper>
           </TeamMemberWrapper>
             <TeamMemberWrapper>
             <PhotoImgWrapper>
-            <PhotoImg src={People.Jared.Photo}/>
+            <PhotoImg src={this.state.People.Jared.Photo}/>
             <AboutMe>
-            {People.Jared.Name} <br/> {People.Jared.Pronouns} <br/> {People.Jared.Role}
+            {this.state.People.Jared.Name} <br/> {this.state.People.Jared.Pronouns} <br/> {this.state.People.Jared.Role}
             </AboutMe>
           </PhotoImgWrapper>
           </TeamMemberWrapper>
@@ -282,7 +290,7 @@ let People = {
             <PhotoImgWrapper>
             <PhotoImg/>
             <AboutMe>
-            {People.Matt.Name} <br/> {People.Matt.Pronouns} <br/> {People.Matt.Role}
+            {this.state.People.Matt.Name} <br/> {this.state.People.Matt.Pronouns} <br/> {this.state.People.Matt.Role}
             </AboutMe>
           </PhotoImgWrapper>
           </TeamMemberWrapper>
@@ -320,6 +328,7 @@ let People = {
 }
     </>
   );
+}
 };
 
 
@@ -373,7 +382,7 @@ const MeetOurStarsTitle = styled.h1`
     color: #d3b456;
         -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-        background-image: linear-gradient(#d3b456 33%,#bc8ae3 66%);
+        background-image: linear-gradient(#bc8ae3 33%,#d3b456 66%);
 }
 
   @media (min-width: 768px) {
