@@ -5,6 +5,7 @@ import DarkModeToggleFunc from './DarkModeToggleFunc.jsx';
 import SunMoon from './SunMoon.jsx';
 import WeAre from './WeAre.jsx';
 import MeetTheTeam from './MeetTheTeam.jsx';
+import SeeOurProjects from './SeeOurProjects.jsx';
 import Home from './Home.jsx';
 import useDarkMode from 'use-dark-mode';
 import styled from 'styled-components';
@@ -30,6 +31,7 @@ export default function Header () {
       <Routes>
         <Route exact path="/" element={<Home darkMode={darkMode}/>} />
         <Route exact path="/team" element={<MeetTheTeam darkMode={darkMode}/>} />
+        <Route exact path="/projects" element={<SeeOurProjects darkMode={darkMode}/>} />
       </Routes>
     </Router>
     :
@@ -43,6 +45,7 @@ export default function Header () {
       <Routes>
         <Route exact path="/" element={<Home darkMode={darkMode}/>} />
         <Route exact path="/team" element={<MeetTheTeam darkMode={darkMode}/>} />
+        <Route exact path="/projects" element={<SeeOurProjects darkMode={darkMode}/>} />
       </Routes>
     </Router>
 }

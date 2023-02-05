@@ -5,9 +5,9 @@ import React from 'react';
 // import DarkMode from '@mui/icons-material/DarkMode';
 import styled, {keyframes} from 'styled-components';
 // import stars from './stars.png';
-import stars from './PossibleStarsBg.png';
-import Moon from './Moon.png';
-import BigStar from './Bigstar.png';
+import stars from '../assets/PossibleStarsBg.png';
+import Moon from '../assets/Moon.png';
+import BigStar from '../assets/Bigstar.png';
 
 
 export default function SunMoon ({darkMode}) {

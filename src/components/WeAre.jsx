@@ -1,11 +1,11 @@
 import React from 'react';
 import styled, {keyframes} from 'styled-components';
-import SDSLogoImg from './Sweet_Dream_Studios_Final20.png';
+import SDSLogoImg from '../assets/Sweet_Dream_Studios_Final20.png';
 // import LogoBg from './Background.png';
 // import BigStar from './Bigstar.png';
-import StarWithTail from './StarWithTail.png';
-import LogoBgWithStars from './Bg_Stars.png';
-import LogoBgWithNoStars from './Bg_noStars.png';
+import StarWithTail from '../assets/StarWithTail.png';
+import LogoBgWithStars from '../assets/Bg_Stars.png';
+import LogoBgWithNoStars from '../assets/Bg_noStars.png';
 
 
 export default function WeAre ({darkMode}) {
