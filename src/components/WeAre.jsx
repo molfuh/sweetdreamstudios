@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled, {keyframes} from 'styled-components';
 import SDSLogoImg from '../assets/Sweet_Dream_Studios_Final20.png';
 // import LogoBg from './Background.png';
@@ -9,6 +9,22 @@ import LogoBgWithNoStars from '../assets/Bg_noStars.png';
 
 
 export default function WeAre ({darkMode}) {
+  useEffect(() => {
+    const imagesPreload = [LogoBgWithNoStars, LogoBgWithStars, StarWithTail ];
+    imagesPreload.forEach((image) => {
+      const newImage = new Image();
+      newImage.src=image;
+      window[image] = newImage;
+    })
+  }, [])
+  // componentDidMount() {
+  //   const imagesPreload = [LogoBgWithNoStars, LogoBgWithStars, StarWithTail ];
+  //   imagesPreload.forEach((image) => {
+  //     const newImage = new Image();
+  //     newImage.src=image;
+  //     window[image] = newImage;
+  //   })
+  // }
   return (
     <>
     {darkMode.value ?

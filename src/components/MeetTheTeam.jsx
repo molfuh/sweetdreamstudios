@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import DarkModeToggleFunc from './DarkModeToggleFunc.jsx';
 import SunMoon from './SunMoon.jsx';
@@ -58,7 +58,7 @@ export default class MeetTheTeam extends React.Component {
       Molly: {
         Name: 'Molly Fuhrman',
         Pronouns: 'She/Her',
-        Role: 'Website / Game Developer',
+        Role: 'Website & Game Developer',
         Photo: MollyImg
       },
       Jared: {
@@ -77,10 +77,23 @@ export default class MeetTheTeam extends React.Component {
   }
 }
   componentDidMount = () => {
-    this.state.Pictures.forEach((picture) => {
-        const img = new Image();
-        img.src = picture.fileName;
-    })};
+    const imagesPreload =this.state.Pictures;
+    imagesPreload.forEach((image) => {
+      const newImage = new Image();
+      newImage.src=image;
+      window[image] = newImage;
+    })
+  }
+
+  // useEffect(() => {
+  //   const imagesPreload = [LogoBgWithNoStars, LogoBgWithStars, StarWithTail ];
+  //   imagesPreload.forEach((image) => {
+  //     const newImage = new Image();
+  //     newImage.src=image;
+  //     window[image] = newImage;
+  //   })
+  // }, [])
+
 //   let projectTitles=['INT Magazine','Meditative Musical Drum','Positively TEDIOUS','Resume','title 4','title 5'];
 // let projectTitlesList=[];
 // projectTitles.forEach((title,index)=>{
