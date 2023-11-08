@@ -12,12 +12,13 @@ import AndyImg from '../headshots/Andy.jpg';
 import PaulinaImg from '../headshots/Paulina.jpg';
 import KedricImg from '../headshots/Kedric.jpg';
 import MattImg from '../headshots/Matt.jpg';
+import GuiImg from '../headshots/Gui.jpg';
 // ({darkMode})
 export default class MeetTheTeam extends React.Component {
   constructor() {
     super();
   this.state = {
-    Pictures: [JaredImg,StevenImg, LauraImg, ThomasImg, MollyImg,AndyImg,PaulinaImg,KedricImg,MattImg],
+    Pictures: [JaredImg,StevenImg, LauraImg, ThomasImg, MollyImg,AndyImg,PaulinaImg,KedricImg,MattImg,GuiImg],
     People: {
       Paulina: {
         Name: 'Paulina Ramirez',
@@ -55,18 +56,24 @@ export default class MeetTheTeam extends React.Component {
         Role: 'Music Composer',
         Photo: ThomasImg
       },
+      Gui: {
+        Name: 'Guilherme Nogueira (Gui)',
+        Pronouns: 'He/Him',
+        Role: 'Music Composer',
+        Photo: GuiImg
+      },
       Molly: {
         Name: 'Molly Fuhrman',
         Pronouns: 'She/Her',
-        Role: 'Website & Game Developer',
+        Role: 'Website Developer',
         Photo: MollyImg
       },
-      Jared: {
-        Name: 'Jared Keffer',
-        Pronouns: 'He/Him',
-        Role: 'Game Developer',
-        Photo: JaredImg
-      },
+      // Jared: {
+      //   Name: 'Jared Keffer',
+      //   Pronouns: 'He/Him',
+      //   Role: 'Game Developer',
+      //   Photo: JaredImg
+      // },
       Matt: {
         Name: 'Matt Breuer',
         Pronouns: 'He/Him',
@@ -198,6 +205,14 @@ render() {
             </AboutMe>
           </PhotoImgWrapper>
           </TeamMemberWrapper>
+          <TeamMemberWrapper>
+            <PhotoImgWrapper>
+            <PhotoImgDark src={this.state.People.Gui.Photo}/>
+            <AboutMe>
+            {this.state.People.Gui.Name} <br/> {this.state.People.Gui.Pronouns} <br/> {this.state.People.Gui.Role}
+            </AboutMe>
+          </PhotoImgWrapper>
+          </TeamMemberWrapper>
             <TeamMemberWrapper>
             <PhotoImgWrapper>
             <PhotoImgDark src={this.state.People.Molly.Photo}/>
@@ -206,14 +221,14 @@ render() {
             </AboutMe>
           </PhotoImgWrapper>
           </TeamMemberWrapper>
-            <TeamMemberWrapper>
+            {/* <TeamMemberWrapper>
             <PhotoImgWrapper>
             <PhotoImgDark src={this.state.People.Jared.Photo}/>
             <AboutMe>
             {this.state.People.Jared.Name} <br/> {this.state.People.Jared.Pronouns} <br/> {this.state.People.Jared.Role}
             </AboutMe>
           </PhotoImgWrapper>
-          </TeamMemberWrapper>
+          </TeamMemberWrapper> */}
             <TeamMemberWrapper>
             <PhotoImgWrapper>
             <PhotoImgDark src={this.state.People.Matt.Photo}/>
@@ -283,6 +298,14 @@ render() {
             </AboutMe>
           </PhotoImgWrapper>
           </TeamMemberWrapper>
+          <TeamMemberWrapper>
+            <PhotoImgWrapper>
+            <PhotoImg src={this.state.People.Gui.Photo}/>
+            <AboutMe>
+            {this.state.People.Gui.Name} <br/> {this.state.People.Gui.Pronouns} <br/> {this.state.People.Gui.Role}
+            </AboutMe>
+          </PhotoImgWrapper>
+          </TeamMemberWrapper>
             <TeamMemberWrapper>
             <PhotoImgWrapper>
             <PhotoImg src={this.state.People.Molly.Photo}/>
@@ -291,17 +314,17 @@ render() {
             </AboutMe>
           </PhotoImgWrapper>
           </TeamMemberWrapper>
-            <TeamMemberWrapper>
+            {/* <TeamMemberWrapper>
             <PhotoImgWrapper>
             <PhotoImg src={this.state.People.Jared.Photo}/>
             <AboutMe>
             {this.state.People.Jared.Name} <br/> {this.state.People.Jared.Pronouns} <br/> {this.state.People.Jared.Role}
             </AboutMe>
           </PhotoImgWrapper>
-          </TeamMemberWrapper>
+          </TeamMemberWrapper> */}
             <TeamMemberWrapper>
             <PhotoImgWrapper>
-            <PhotoImg/>
+            <PhotoImg src={this.state.People.Matt.Photo}/>
             <AboutMe>
             {this.state.People.Matt.Name} <br/> {this.state.People.Matt.Pronouns} <br/> {this.state.People.Matt.Role}
             </AboutMe>
