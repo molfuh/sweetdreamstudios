@@ -14,6 +14,15 @@ export default function Mission ({darkMode}) {
       <SocialMediaTitle>Follow us to stay up to date on our projects:
 </SocialMediaTitle>
     <SocialMedia>
+      
+    {/* <a href="https://www.instagram.com/SweetDreamStudios.vg/">Instagram</a>
+    <a href="https://twitter.com/SweetDreamSTU">Twitter</a>
+    <a href="https://www.facebook.com/Sweet-Dream-Studios-104392922407390">Facebook</a>
+    <a href="https://www.tiktok.com/@sweet_dream_studios?lang=en">TikTok</a> */}
+     
+      {/* <InstagramCloud>
+        <a href="https://www.instagram.com/SweetDreamStudios.vg/"/>
+      </InstagramCloud> */}
     </SocialMedia>
     {/* {darkMode.value ?
       <SweetDreamStudiosWrapperDark>
@@ -38,8 +47,39 @@ export default function Mission ({darkMode}) {
 
 const SocialMedia = styled.div`
   display:flex;
+  position: relative;
+  top: 70%;
 `;
 
+const InstagramCloud = styled.div`
+width: 300px;
+height: 100px;
+background: white;
+border-radius: 100px;
+position: absolute;
+margin: 30% auto;
+box-shadow: 6px 6px 13px 0px #7d7e7ea8;
+&:after {
+  width: 80px;
+  height: 80px;
+  top: -30px;
+  left: 30px;
+  border-radius: 100px;
+}
+&:before {
+  width: 150px;
+  height: 150px;
+  top: -60px;
+  right: 40px;
+  border-radius: 200px;
+}
+&:after, &:before {
+  content: '';
+  position: absolute;
+  background: white;
+  // z-index: -1
+}
+`;
 
 const MissionStatement = styled.h2`
 z-index: 1;
