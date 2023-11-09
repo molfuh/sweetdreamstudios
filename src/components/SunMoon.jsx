@@ -45,6 +45,7 @@ const random = Math.random();
 
 
 const FixedPosition = styled.div`
+top: 12vh;
   position: fixed;
   width: 100vw;
   height: 100vh;

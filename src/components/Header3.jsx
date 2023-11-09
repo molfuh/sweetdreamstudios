@@ -18,6 +18,7 @@ export default function Header ({darkMode}) {
         <Link to="/">go home</Link>
         <Link to="/team">meet the team</Link>
         <Link to="/projects">see our projects</Link>
+        {/* <Link to="/artistcorner">Artist Spotlight</Link> */}
         {/* <Link to="/follow">follow us</Link> */}
       </nav>
     {/* <Routes> */}
@@ -38,6 +39,7 @@ export default function Header ({darkMode}) {
         <Link to="/">go home</Link>
         <Link to="/team">meet the team</Link>
         <Link to="/projects">see our projects</Link>
+        {/* <Link to="/artistcorner">Artist Spotlight</Link> */}
         {/* <Link to="/follow">follow us</Link> */}
       </nav>
     {/* <Routes> */}
