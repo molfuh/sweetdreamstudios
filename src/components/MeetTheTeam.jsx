@@ -157,7 +157,7 @@ render() {
       </MeetOurStarsTitleWrapper>
       <PhotoGalleryWrapper>
       <PhotoGallery>
-        <TeamMemberWrapper>
+        <TeamMemberWrapper  style={{width: '100%'}}>
       <PhotoImgWrapper>
         <PhotoImgDark src={this.state.People.Paulina.Photo}/>
           <AboutMe>
@@ -250,7 +250,7 @@ render() {
     </MeetOurStarsTitleWrapper>
     <PhotoGalleryWrapper>
     <PhotoGallery>
-        <TeamMemberWrapper>
+        <TeamMemberWrapper  style={{width: '100%'}}>
       <PhotoImgWrapper>
         <PhotoImg src={this.state.People.Paulina.Photo}/>
           <AboutMe>
