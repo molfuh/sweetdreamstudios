@@ -388,7 +388,8 @@ const MeetOurStarsTitleWrapper = styled.div`
   // z-index: -1;
   // position: absolute;
   display: flex;
-  height: 50vh;
+  // height: 50vh;
+  margin-top: 15vh;
   align-items: center;
   justify-content: center;
   width: 100vw;
@@ -467,6 +468,7 @@ position: relative;
 // padding-bottom: 20%;
 height: 250px;
 width: 200px;
+margin-bottom: 1.5em;
 // height: 250px;
 // padding: 0.5em;
 // background-color: #d3b456;

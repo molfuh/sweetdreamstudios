@@ -2,11 +2,16 @@ import React from 'react';
 import styled, {keyframes} from 'styled-components';
 // import SDSLogoImg from './Sweet_Dream_Studios_Final20.png';
 // import LogoBg from './Background.png';
-// import BigStar from './Bigstar.png';
+import InstagramImg from '../assets/instagramImg.png';
+import TikTokImg from '../assets/tiktokImg.png';
+import FacebookImg from '../assets/facebookImg.png';
+import TwitterImg from '../assets/twitterImg.png';
 
 
 export default function Mission ({darkMode}) {
   return (
+    <>
+    {darkMode.value ? 
     <>
     <MissionStatement>
       We are Sweet Dream Studios! 
@@ -19,10 +24,14 @@ export default function Mission ({darkMode}) {
     <a href="https://twitter.com/SweetDreamSTU">Twitter</a>
     <a href="https://www.facebook.com/Sweet-Dream-Studios-104392922407390">Facebook</a>
     <a href="https://www.tiktok.com/@sweet_dream_studios?lang=en">TikTok</a> */}
-     
       {/* <InstagramCloud>
-        <a href="https://www.instagram.com/SweetDreamStudios.vg/"/>
+        <a href="https://www.instagram.com/SweetDreamStudios.vg/">Instagram</a>
       </InstagramCloud> */}
+          <InstagramLinkDark target="_blank" href="https://www.instagram.com/SweetDreamStudios.vg/" />
+    <TikTokLinkDark target="_blank" href="https://www.tiktok.com/@sweet_dream_studios?lang=en" />
+    <TwitterLinkDark target="_blank" href="https://twitter.com/SweetDreamSTU" />
+    <FacebookLinkDark target="_blank" href="https://www.facebook.com/Sweet-Dream-Studios-104392922407390" />
+
     </SocialMedia>
     {/* {darkMode.value ?
       <SweetDreamStudiosWrapperDark>
@@ -42,58 +51,123 @@ export default function Mission ({darkMode}) {
       </SweetDreamStudiosWrapper>
     } */}
     </>
+    :
+    <>
+    <MissionStatement>
+    We are Sweet Dream Studios! 
+  </MissionStatement>
+    <SocialMediaTitle>Follow us to stay up to date on our projects:
+</SocialMediaTitle>
+  <SocialMedia>
+    
+  {/* <a href="https://www.instagram.com/SweetDreamStudios.vg/">Instagram</a>
+  <a href="https://twitter.com/SweetDreamSTU">Twitter</a>
+  <a href="https://www.facebook.com/Sweet-Dream-Studios-104392922407390">Facebook</a>
+  <a href="https://www.tiktok.com/@sweet_dream_studios?lang=en">TikTok</a> */}
+    {/* <InstagramCloud>
+      <a href="https://www.instagram.com/SweetDreamStudios.vg/">Instagram</a>
+    </InstagramCloud> */}
+      <InstagramLink target="_blank" href="https://www.instagram.com/SweetDreamStudios.vg/" />
+      <TikTokLink target="_blank" href="https://www.tiktok.com/@sweet_dream_studios?lang=en" />
+      <TwitterLink target="_blank" href="https://twitter.com/SweetDreamSTU" />
+      <FacebookLink target="_blank" href="https://www.facebook.com/Sweet-Dream-Studios-104392922407390" />
+  </SocialMedia>
+    </>
+  }
+  </>
   );
 };
 
 const SocialMedia = styled.div`
   display:flex;
   position: relative;
-  top: 70%;
+  // top: 70%;
+  height: 100%;
+  align-items:flex-end;
+  // justify-content: center;
+  margin-top: -100px;
+  margin-left: 5em;
 `;
 
-const InstagramCloud = styled.div`
-width: 300px;
-height: 100px;
-background: white;
-border-radius: 100px;
-position: absolute;
-margin: 30% auto;
-box-shadow: 6px 6px 13px 0px #7d7e7ea8;
-&:after {
-  width: 80px;
-  height: 80px;
-  top: -30px;
-  left: 30px;
-  border-radius: 100px;
-}
-&:before {
-  width: 150px;
-  height: 150px;
-  top: -60px;
-  right: 40px;
-  border-radius: 200px;
-}
-&:after, &:before {
-  content: '';
-  position: absolute;
-  background: white;
-  // z-index: -1
-}
+const LinkStyle = styled.a`
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  cursor: pointer;
+  height: 120px;
+  width: 170px;
+  margin: 10px;
+`;
+
+const LinkStyleDark = styled(LinkStyle)`
+  filter: invert(1);
+`;
+
+const InstagramLinkDark= styled(LinkStyleDark)`
+  background: url(${InstagramImg});
+`;
+
+const TikTokLinkDark= styled(LinkStyleDark)`
+  background: url(${TikTokImg});
+`;
+
+const TwitterLinkDark= styled(LinkStyleDark)`
+  background: url(${TwitterImg});
+`;
+
+const FacebookLinkDark= styled(LinkStyleDark)`
+  background: url(${FacebookImg});
+`;
+
+
+const InstagramLink = styled(LinkStyle)`
+  background: url(${InstagramImg});
+`;
+
+const FacebookLink = styled(LinkStyle)`
+  background: url(${FacebookImg});
+`;
+
+const TikTokLink = styled(LinkStyle)`
+  background: url(${TikTokImg});
+`;
+
+const TwitterLink = styled(LinkStyle)`
+  background: url(${TwitterImg});
+`;
+
+const CloudLink = styled.a`
+  border: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  height: 120px;
+  width: 170px;
+  font-family: 'Josefin Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  text-decoration: none;
+`;
+
+const CloudLinkInstagram = styled(CloudLink)`
+
 `;
 
 const MissionStatement = styled.h2`
 z-index: 1;
 position: absolute;
 font-size: 4em;
-margin-top: 2.5em;
+// margin-top: 5em;
 font-weight: 400;
+margin: 5em 1em;
 `;
 
 const SocialMediaTitle = styled(MissionStatement)`
   // position: absolute;
   // z-index: 1;
   // margin-top: 7.5em;
-  margin-top: 4.5em;
+  margin-top: 7em;
   // font-size: 2.5em;
 `;
 

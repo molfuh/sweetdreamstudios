@@ -25,7 +25,7 @@ export default function Header () {
     {darkMode.value ? 
     <Router>
     <HeaderNavDark>
-      <Link to="/" style={{flex:'auto', width: '100%'}}>
+      <Link to="/" style={{flex:'auto'}}>
         <HomeButton></HomeButton>
       </Link>
       <Link to="/">Home</Link>
@@ -44,7 +44,7 @@ export default function Header () {
     :
     <Router>
     <HeaderNav>
-    <Link to="/" style={{flex:'auto', width: '100%'}}>
+    <Link to="/" style={{flex:'auto'}}>
         <HomeButton></HomeButton>
       </Link>
       <Link to="/">Home</Link>
