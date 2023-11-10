@@ -7,6 +7,7 @@ import WeAre from './WeAre.jsx';
 import MeetTheTeam from './MeetTheTeam.jsx';
 import SeeOurProjects from './SeeOurProjects.jsx';
 import ArtistCorner from './ArtistCorner.jsx';
+import Footer from './Footer.jsx';
 import Home from './Home.jsx';
 import useDarkMode from 'use-dark-mode';
 import styled from 'styled-components';
@@ -23,48 +24,62 @@ export default function Header () {
   return (
     <>
     {darkMode.value ? 
+    <>
+    <AppWrapper>
     <Router>
     <HeaderNavDark>
       <Link to="/" style={{flex:'auto'}}>
         <HomeButton></HomeButton>
       </Link>
       <Link to="/">Home</Link>
-        <Link to="/team">Meet the Team</Link>
-        <Link to="/projects">See Our Projects</Link>
-        <Link to="/artistcorner">Artist Spotlight</Link>
+        <Link to="/team" style={{marginRight:'2em'}}>Meet the Team</Link>
+        {/* <Link to="/projects">See Our Projects</Link> */}
+        {/* <Link to="/artistcorner">Artist Spotlight</Link> */}
         {/* <Link to="/follow">follow us</Link> */}
       </HeaderNavDark>
       <Routes>
         <Route exact path="/" element={<Home darkMode={darkMode}/>} />
         <Route exact path="/team" element={<MeetTheTeam darkMode={darkMode}/>} />
-        <Route exact path="/projects" element={<SeeOurProjects darkMode={darkMode}/>} />
-        <Route exact path="/artistcorner" element={<ArtistCorner darkMode={darkMode}/>} />
+        {/* <Route exact path="/projects" element={<SeeOurProjects darkMode={darkMode}/>} /> */}
+        {/* <Route exact path="/artistcorner" element={<ArtistCorner darkMode={darkMode}/>} /> */}
       </Routes>
     </Router>
+    <Footer darkMode={darkMode} />
+    </AppWrapper>
+    </>
     :
+    <>
+    <AppWrapper>
     <Router>
     <HeaderNav>
     <Link to="/" style={{flex:'auto'}}>
         <HomeButton></HomeButton>
       </Link>
       <Link to="/">Home</Link>
-        <Link to="/team">Meet the Team</Link>
-        <Link to="/projects">See Our Projects</Link>
-        <Link to="/artistcorner">Artist Spotlight</Link>
+        <Link to="/team" style={{marginRight:'2em'}}>Meet the Team</Link>
+        {/* <Link to="/projects">See Our Projects</Link> */}
+        {/* <Link to="/artistcorner">Artist Spotlight</Link> */}
         {/* <Link to="/follow">follow us</Link> */}
       </HeaderNav>
       <Routes>
         <Route exact path="/" element={<Home darkMode={darkMode}/>} />
         <Route exact path="/team" element={<MeetTheTeam darkMode={darkMode}/>} />
-        <Route exact path="/projects" element={<SeeOurProjects darkMode={darkMode}/>} />
-        <Route exact path="/artistcorner" element={<ArtistCorner darkMode={darkMode}/>} />
+        {/* <Route exact path="/projects" element={<SeeOurProjects darkMode={darkMode}/>} /> */}
+        {/* <Route exact path="/artistcorner" element={<ArtistCorner darkMode={darkMode}/>} /> */}
       </Routes>
     </Router>
+    <Footer darkMode={darkMode} />
+    </AppWrapper>
+    </>
 }
     </>
   );
       
 }
+
+const AppWrapper = styled.main`
+  position: relative;
+`;
 
 const HomeButton = styled.button`
   flex: auto;
@@ -74,7 +89,7 @@ const HomeButton = styled.button`
   display: flex;
   align-items: center;
   background-image: url(${SDSText});
-  height:50px;
+  height:60px;
   background-position: center left;
   background-size: contain;
   background-repeat: no-repeat;
@@ -92,7 +107,8 @@ const HeaderNav = styled.nav`
   display: flex;
   justify-content: flex-end;
   position: fixed;
-  width: 98%;
+  width: 100%;
+  padding-right: 20px;
   z-index: 3;
   height: 15vh;
   align-items: center;
@@ -100,7 +116,7 @@ const HeaderNav = styled.nav`
     margin-left: 2em;
     text-decoration: unset;
     color: black;
-    font-size: 1.25em;
+    font-size: 18px;
   }
 `;
 const HeaderNavDark = styled(HeaderNav)`

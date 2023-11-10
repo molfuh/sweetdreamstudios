@@ -32,9 +32,9 @@ return (
         <FirstView>
           <WeAre darkMode={darkMode} />
         </FirstView>
-        <SecondView>
-          <Mission darkMode={darkMode} />
-        </SecondView>
+        {/* <SecondView> */}
+          {/* <Mission darkMode={darkMode} /> */}
+        {/* </SecondView> */}
     </HomeBgDark>
     :
     <HomeBg>
@@ -46,9 +46,9 @@ return (
       <FirstView>
         <WeAre darkMode={darkMode} />
       </FirstView>
-      <SecondView>
-          <Mission darkMode={darkMode} />
-        </SecondView>
+      {/* <SecondView> */}
+          {/* <Mission darkMode={darkMode} /> */}
+        {/* </SecondView> */}
   </HomeBg>
 }
     </>
@@ -57,7 +57,7 @@ return (
 
 const HomeBg = styled.div`
   background: linear-gradient(to bottom,rgb(76 118 170) 0%,rgb(219 185 136) 100%);
-  height: 200vh;
+  height: 100vh;
 `;
 const HomeBgDark = styled(HomeBg)`
   // background: linear-gradient(to bottom, rgb(0 0 0) 0%, rgb(7, 18, 67) 8%, rgb(29 15 63) 20%, rgb(5 4 8) 60%, rgb(0 0 0) 100%);

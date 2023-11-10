@@ -436,6 +436,7 @@ const MeetOurStarsTitleDark = styled(MeetOurStarsTitle)`
   const PhotoGalleryWrapper = styled.div`
     display: flex;
     justify-content: center;
+    padding-bottom: 150px;
   `;
 
 const PhotoGallery = styled.div`

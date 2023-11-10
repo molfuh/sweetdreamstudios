@@ -16,9 +16,9 @@ export default function Mission ({darkMode}) {
     <MissionStatement>
       We are Sweet Dream Studios! 
     </MissionStatement>
-      <SocialMediaTitle>Follow us to stay up to date on our projects:
-</SocialMediaTitle>
-    <SocialMedia>
+      {/* <SocialMediaTitle>Follow us to stay up to date on our projects: */}
+{/* </SocialMediaTitle> */}
+    {/* <SocialMedia> */}
       
     {/* <a href="https://www.instagram.com/SweetDreamStudios.vg/">Instagram</a>
     <a href="https://twitter.com/SweetDreamSTU">Twitter</a>
@@ -27,12 +27,12 @@ export default function Mission ({darkMode}) {
       {/* <InstagramCloud>
         <a href="https://www.instagram.com/SweetDreamStudios.vg/">Instagram</a>
       </InstagramCloud> */}
-          <InstagramLinkDark target="_blank" href="https://www.instagram.com/SweetDreamStudios.vg/" />
+          {/* <InstagramLinkDark target="_blank" href="https://www.instagram.com/SweetDreamStudios.vg/" />
     <TikTokLinkDark target="_blank" href="https://www.tiktok.com/@sweet_dream_studios?lang=en" />
     <TwitterLinkDark target="_blank" href="https://twitter.com/SweetDreamSTU" />
-    <FacebookLinkDark target="_blank" href="https://www.facebook.com/Sweet-Dream-Studios-104392922407390" />
+    <FacebookLinkDark target="_blank" href="https://www.facebook.com/Sweet-Dream-Studios-104392922407390" /> */}
 
-    </SocialMedia>
+    {/* </SocialMedia> */}
     {/* {darkMode.value ?
       <SweetDreamStudiosWrapperDark>
         <SweetDreamStudiosDark>Sweet Dream Studios</SweetDreamStudiosDark>
@@ -56,9 +56,9 @@ export default function Mission ({darkMode}) {
     <MissionStatement>
     We are Sweet Dream Studios! 
   </MissionStatement>
-    <SocialMediaTitle>Follow us to stay up to date on our projects:
-</SocialMediaTitle>
-  <SocialMedia>
+    {/* <SocialMediaTitle>Follow us to stay up to date on our projects: */}
+{/* </SocialMediaTitle> */}
+  {/* <SocialMedia> */}
     
   {/* <a href="https://www.instagram.com/SweetDreamStudios.vg/">Instagram</a>
   <a href="https://twitter.com/SweetDreamSTU">Twitter</a>
@@ -67,11 +67,11 @@ export default function Mission ({darkMode}) {
     {/* <InstagramCloud>
       <a href="https://www.instagram.com/SweetDreamStudios.vg/">Instagram</a>
     </InstagramCloud> */}
-      <InstagramLink target="_blank" href="https://www.instagram.com/SweetDreamStudios.vg/" />
+      {/* <InstagramLink target="_blank" href="https://www.instagram.com/SweetDreamStudios.vg/" />
       <TikTokLink target="_blank" href="https://www.tiktok.com/@sweet_dream_studios?lang=en" />
       <TwitterLink target="_blank" href="https://twitter.com/SweetDreamSTU" />
-      <FacebookLink target="_blank" href="https://www.facebook.com/Sweet-Dream-Studios-104392922407390" />
-  </SocialMedia>
+      <FacebookLink target="_blank" href="https://www.facebook.com/Sweet-Dream-Studios-104392922407390" /> */}
+  {/* </SocialMedia> */}
     </>
   }
   </>
@@ -85,7 +85,7 @@ const SocialMedia = styled.div`
   height: 100%;
   align-items:flex-end;
   // justify-content: center;
-  margin-top: -100px;
+  margin-bottom: 1em;
   margin-left: 5em;
 `;
 

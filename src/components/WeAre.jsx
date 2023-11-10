@@ -132,7 +132,8 @@ const SweetDreamStudios = styled.h1`
   -moz-text-fill-color: transparent;
   font-size: 9em;
   // background-image: linear-gradient(#ffec8c 33%,#384d89 66%);
-  background-image: linear-gradient(#bc8ae3 33%, #d3b456 66%);
+  // background-image: linear-gradient(#bc8ae3 33%, #d3b456 66%);
+  background-image: linear-gradient(#3638af 33%,#b989e1 66%);
   width: min-content;
   @media (min-width: 768px) {
     font-size: 8em;
