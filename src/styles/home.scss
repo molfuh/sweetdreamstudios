@@ -1,0 +1,61 @@
+
+.home-button {
+  flex: auto;
+  background: transparent;
+  border: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-image: url('../assets/SDS_Text.png');
+  height:60px;
+  background-position: center left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+nav {
+backdrop-filter: blur(20px);
+top: 0;
+display: flex;
+justify-content: flex-end;
+position: fixed;
+width: 100%;
+padding-right: 20px;
+z-index: 3;
+height: 15vh;
+align-items: center;
+max-height: 80px;
+}
+nav a {
+  margin-left: 2em;
+  text-decoration: unset;
+  color: black;
+  font-size: 18px;
+}
+
+.dark-mode nav a {
+  color:white;
+}
+
+// `;
+
+// const HeaderNavDark = styled(HeaderNav)`
+// a {
+//   color: white;
+// }
+// `;
+
+// const ScrollContainer = styled.div`
+//   scroll-snap-type: y proximity;
+//   /* height: 100%; */
+//   scroll-snap-points-y: repeat(100vh);
+//   /* overflow: scroll; */
+// `;
+
+
+// const FirstView = styled.div`
+// height: 100vh;
+// scroll-snap-align: start;
+// `;
+// const SecondView = styled(FirstView)``
