@@ -23,7 +23,7 @@ export default function Header () {
   const darkMode = useDarkMode(true);
   return (
     <>
-    {darkMode.value ? 
+    {darkMode.value ?
     <>
     <AppWrapper>
     <Router>
@@ -74,7 +74,7 @@ export default function Header () {
 }
     </>
   );
-      
+
 }
 
 const AppWrapper = styled.main`
@@ -112,6 +112,7 @@ const HeaderNav = styled.nav`
   z-index: 3;
   height: 15vh;
   align-items: center;
+  max-height: 80px;
   a {
     margin-left: 2em;
     text-decoration: unset;

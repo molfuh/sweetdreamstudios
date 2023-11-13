@@ -19,14 +19,12 @@ import {
 
 
 export default function Home ({darkMode}) {
-// const darkMode = useDarkMode(true);
 return (
   <>
-  {darkMode.value ? 
+  {darkMode.value ?
    <HomeBgDark>
       <DarkModeToggleFunc darkMode={darkMode}/>
       <FixedPosition>
-        {/* <Header darkMode={darkMode}/> */}
         <SunMoon darkMode={darkMode}/>
       </FixedPosition>
         <FirstView>

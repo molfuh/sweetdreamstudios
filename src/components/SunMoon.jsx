@@ -16,7 +16,7 @@ const random = Math.random();
   return (
     <>
         {
-          darkMode.value ? 
+          darkMode.value ?
           <>
           <FixedPosition>
             <Stars/>
@@ -28,8 +28,8 @@ const random = Math.random();
             </ShootingStarsContainer>
             <MoonImg src={Moon}/>
             </FixedPosition>
-          </> 
-          : 
+          </>
+          :
           <>
             <FixedPosition>
             <Cloud />
@@ -45,7 +45,8 @@ const random = Math.random();
 
 
 const FixedPosition = styled.div`
-top: 12vh;
+/* top: 12vw; */
+top: 0;
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -78,26 +79,20 @@ const Stars = styled.div`
 `;
 
 const Cloud = styled.div`
-    /* background-image: url(${stars}); */
-    /* height: 30vh;
-    width: 20vw;
-    position: relative;
-    background-color: white;
-    position: absolute; */
-    width: 350px;
-    height: 120px;
-    background: white;
-    border-radius: 100px;
-    position: absolute;
-    margin: 30% auto;
-    animation-name: ${CloudsScroll};
-animation-duration: 60s;
-// animation-delay: 2s;
-animation-direction: reverse;
-animation-fill-mode: backwards;
-animation-iteration-count: infinite;
-animation-timing-function: linear;
-box-shadow: 6px 6px 13px 0px #7d7e7ea8;
+  width: 350px;
+  height: 120px;
+  background: white;
+  border-radius: 100px;
+  position: absolute;
+  top: 50%;
+   /* margin: 30% auto; */
+  animation-name: ${CloudsScroll};
+  animation-duration: 60s;
+  animation-direction: reverse;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  box-shadow: 6px 6px 13px 0px #7d7e7ea8;
     &:after {
       width: 100px;
       height: 100px;
@@ -121,14 +116,13 @@ box-shadow: 6px 6px 13px 0px #7d7e7ea8;
 `;
 
 const Cloud2 = styled(Cloud)`
-  /* animation-delay: 3s; */
   top: 25%;
   animation-delay: 5s;
   animation-direction: normal;
 `
 
 const Cloud3 = styled(Cloud)`
-    top: 50%;
+    top: 75%;
     animation-delay: 20s;
 `
 
@@ -196,20 +190,18 @@ const ShootingStar2 = styled(ShootingStar1)`
   animation-delay: 8s;
   animation-duration: 8s;
   /* bottom: 50%; */
-  top: 25vh;
+  top: 25%;
 `;
 
 const ShootingStar3 = styled(ShootingStar1)`
-/* left: 50%; */
-/* margin-left: 20%; */
-top: 50vh;
+top: 50%;
 animation-delay: 14s;
 animation-duration: 9s;
 `;
 
 const PlanetEnter = keyframes`
 0% {top: 50%; left: -100%}
-100% {top: 5%; left: 0}
+100% {top: 80px; left: 0}
 `;
 
 const MoonImg = styled.img`
@@ -219,13 +211,9 @@ width: 40vw;
 left: 0;
 top: 0;
 height: 40vw;
-// background-color: transparent;
-// border-radius: 50%;
-// box-shadow: -25px 10px 0px 0px #fff;
 animation-name: ${PlanetEnter};
 animation-duration: 2s;
 animation-fill-mode: forwards;
-// animation-iteration-count: infinite;
 `;
 
 

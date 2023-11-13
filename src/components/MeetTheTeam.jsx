@@ -13,7 +13,7 @@ import PaulinaImg from '../headshots/Paulina.jpg';
 import KedricImg from '../headshots/Kedric.jpg';
 import MattImg from '../headshots/Matt.jpg';
 import GuiImg from '../headshots/Gui.jpg';
-// ({darkMode})
+
 export default class MeetTheTeam extends React.Component {
   constructor() {
     super();
@@ -148,7 +148,7 @@ export default class MeetTheTeam extends React.Component {
 render() {
   return (
     <>
-  {this.props.darkMode.value ? 
+  {this.props.darkMode.value ?
   <>
       <DarkModeToggleFunc darkMode={this.props.darkMode}/>
       <SunMoon darkMode={this.props.darkMode}/>
@@ -165,6 +165,30 @@ render() {
           </AboutMe>
         </PhotoImgWrapper>
         </TeamMemberWrapper>
+        <TeamMemberWrapper style={{width: 'calc(50% - 200px)', justifyContent: 'flex-end'}}>
+              <PhotoImgWrapper>
+              <PhotoImgDark src={this.state.People.Andy.Photo}/>
+              <AboutMe>
+              {this.state.People.Andy.Name} <br/> {this.state.People.Andy.Pronouns} <br/> {this.state.People.Andy.Role}
+              </AboutMe>
+            </PhotoImgWrapper>
+            </TeamMemberWrapper>
+            <TeamMemberWrapper>
+            <PhotoImgWrapper>
+            <PhotoImgDark src={this.state.People.Thomas.Photo}/>
+            <AboutMe>
+            {this.state.People.Thomas.Name} <br/> {this.state.People.Thomas.Pronouns} <br/> {this.state.People.Thomas.Role}
+            </AboutMe>
+          </PhotoImgWrapper>
+          </TeamMemberWrapper>
+          <TeamMemberWrapper style={{width: 'calc(50% - 200px)', justifyContent: 'flex-start'}}>
+            <PhotoImgWrapper>
+            <PhotoImgDark src={this.state.People.Gui.Photo}/>
+            <AboutMe>
+            {this.state.People.Gui.Name} <br/> {this.state.People.Gui.Pronouns} <br/> {this.state.People.Gui.Role}
+            </AboutMe>
+          </PhotoImgWrapper>
+          </TeamMemberWrapper>
         <TeamMemberWrapper>
         <PhotoImgWrapper>
         <PhotoImgDark src={this.state.People.Steven.Photo}/>
@@ -189,30 +213,6 @@ render() {
                 </AboutMe>
               </PhotoImgWrapper>
               </TeamMemberWrapper>
-              <TeamMemberWrapper>
-              <PhotoImgWrapper>
-              <PhotoImgDark src={this.state.People.Andy.Photo}/>
-              <AboutMe>
-              {this.state.People.Andy.Name} <br/> {this.state.People.Andy.Pronouns} <br/> {this.state.People.Andy.Role}
-              </AboutMe>
-            </PhotoImgWrapper>
-            </TeamMemberWrapper>
-            <TeamMemberWrapper>
-            <PhotoImgWrapper>
-            <PhotoImgDark src={this.state.People.Thomas.Photo}/>
-            <AboutMe>
-            {this.state.People.Thomas.Name} <br/> {this.state.People.Thomas.Pronouns} <br/> {this.state.People.Thomas.Role}
-            </AboutMe>
-          </PhotoImgWrapper>
-          </TeamMemberWrapper>
-          <TeamMemberWrapper>
-            <PhotoImgWrapper>
-            <PhotoImgDark src={this.state.People.Gui.Photo}/>
-            <AboutMe>
-            {this.state.People.Gui.Name} <br/> {this.state.People.Gui.Pronouns} <br/> {this.state.People.Gui.Role}
-            </AboutMe>
-          </PhotoImgWrapper>
-          </TeamMemberWrapper>
             <TeamMemberWrapper>
             <PhotoImgWrapper>
             <PhotoImgDark src={this.state.People.Molly.Photo}/>
@@ -258,6 +258,30 @@ render() {
           </AboutMe>
         </PhotoImgWrapper>
         </TeamMemberWrapper>
+        <TeamMemberWrapper style={{width: 'calc(50% - 200px)', justifyContent: 'flex-end'}}>
+              <PhotoImgWrapper>
+              <PhotoImg src={this.state.People.Andy.Photo}/>
+              <AboutMe>
+              {this.state.People.Andy.Name} <br/> {this.state.People.Andy.Pronouns} <br/> {this.state.People.Andy.Role}
+              </AboutMe>
+            </PhotoImgWrapper>
+            </TeamMemberWrapper>
+            <TeamMemberWrapper>
+            <PhotoImgWrapper>
+            <PhotoImg src={this.state.People.Thomas.Photo}/>
+            <AboutMe>
+            {this.state.People.Thomas.Name} <br/> {this.state.People.Thomas.Pronouns} <br/> {this.state.People.Thomas.Role}
+            </AboutMe>
+          </PhotoImgWrapper>
+          </TeamMemberWrapper>
+          <TeamMemberWrapper style={{width: 'calc(50% - 200px)', justifyContent: 'flex-start'}}>
+            <PhotoImgWrapper>
+            <PhotoImg src={this.state.People.Gui.Photo}/>
+            <AboutMe>
+            {this.state.People.Gui.Name} <br/> {this.state.People.Gui.Pronouns} <br/> {this.state.People.Gui.Role}
+            </AboutMe>
+          </PhotoImgWrapper>
+          </TeamMemberWrapper>
         <TeamMemberWrapper>
         <PhotoImgWrapper>
         <PhotoImg src={this.state.People.Steven.Photo}/>
@@ -282,30 +306,6 @@ render() {
                 </AboutMe>
               </PhotoImgWrapper>
               </TeamMemberWrapper>
-              <TeamMemberWrapper>
-              <PhotoImgWrapper>
-              <PhotoImg src={this.state.People.Andy.Photo}/>
-              <AboutMe>
-              {this.state.People.Andy.Name} <br/> {this.state.People.Andy.Pronouns} <br/> {this.state.People.Andy.Role}
-              </AboutMe>
-            </PhotoImgWrapper>
-            </TeamMemberWrapper>
-            <TeamMemberWrapper>
-            <PhotoImgWrapper>
-            <PhotoImg src={this.state.People.Thomas.Photo}/>
-            <AboutMe>
-            {this.state.People.Thomas.Name} <br/> {this.state.People.Thomas.Pronouns} <br/> {this.state.People.Thomas.Role}
-            </AboutMe>
-          </PhotoImgWrapper>
-          </TeamMemberWrapper>
-          <TeamMemberWrapper>
-            <PhotoImgWrapper>
-            <PhotoImg src={this.state.People.Gui.Photo}/>
-            <AboutMe>
-            {this.state.People.Gui.Name} <br/> {this.state.People.Gui.Pronouns} <br/> {this.state.People.Gui.Role}
-            </AboutMe>
-          </PhotoImgWrapper>
-          </TeamMemberWrapper>
             <TeamMemberWrapper>
             <PhotoImgWrapper>
             <PhotoImg src={this.state.People.Molly.Photo}/>
@@ -380,42 +380,23 @@ render() {
 
 const MeetOurStarsTitleWrapper = styled.div`
   user-select: none;
-  // width: min-content;
-  // color: #0a143dbf;
-  // mix-blend-mode: hard-light;
-  // height: 100vh;
-  /* margin: 0 25px; */
-  // z-index: -1;
-  // position: absolute;
   display: flex;
-  // height: 50vh;
   margin-top: 15vh;
   align-items: center;
   justify-content: center;
   width: 100vw;
-  // scroll-snap-align: center;
 `;
 
 const MeetOurStarsTitle = styled.h1`
     user-select: none;
-    // width: min-content;
-    // height: 100vh;
-    // position: absolute;
     display: flex;
-    margin: 0;
+    /* margin: 0; */
     width: auto;
     display: flex;
-    // width: 100vw;
     font-weight: 400;
-    // font-size: 15vw;
     font-size: 7.5em;
-    /* z-index: 8; */
     position: relative;
     font-weight: 400;
-    // -webkit-background-clip: text;
-    // -webkit-text-fill-color: transparent;
-    // -moz-background-clip: text;
-    // background-image: linear-gradient(#d3b456 33%, #bc8ae3 66%);
     color: #d3b456;
         -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -425,7 +406,10 @@ const MeetOurStarsTitle = styled.h1`
   @media (min-width: 768px) {
     font-size: 8em;
   }
-  // z-index: 1;
+
+  @media (max-width: 768px) {
+    font-size: 5em;
+  }
 `;
 
 const MeetOurStarsTitleDark = styled(MeetOurStarsTitle)`
