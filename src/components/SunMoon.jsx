@@ -206,11 +206,13 @@ const PlanetEnter = keyframes`
 
 const MoonImg = styled.img`
 position: absolute;
-margin: -6vw;
-width: 40vw;
+/* margin: -6vw; */
+/* width: 40vw; */
 left: 0;
 top: 0;
-height: 40vw;
+/* height: 40vw; */
+width: 350px;
+height: 350px;
 animation-name: ${PlanetEnter};
 animation-duration: 2s;
 animation-fill-mode: forwards;

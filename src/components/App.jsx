@@ -32,9 +32,9 @@ export default function Header () {
         <HomeButton></HomeButton>
       </Link>
       <Link to="/">Home</Link>
-        <Link to="/team" style={{marginRight:'2em'}}>Meet the Team</Link>
-        {/* <Link to="/projects">See Our Projects</Link> */}
-        {/* <Link to="/artistcorner">Artist Spotlight</Link> */}
+        <Link to="/team">Meet the Team</Link>
+        <Link to="/projects">See Our Projects</Link>
+        <Link to="/artistcorner"  style={{marginRight:'2em'}}>Artist Spotlight</Link>
         {/* <Link to="/follow">follow us</Link> */}
       </HeaderNavDark>
       <Routes>
@@ -56,16 +56,16 @@ export default function Header () {
         <HomeButton></HomeButton>
       </Link>
       <Link to="/">Home</Link>
-        <Link to="/team" style={{marginRight:'2em'}}>Meet the Team</Link>
-        {/* <Link to="/projects">See Our Projects</Link> */}
-        {/* <Link to="/artistcorner">Artist Spotlight</Link> */}
+        <Link to="/team">Meet the Team</Link>
+        <Link to="/projects">See Our Projects</Link>
+        <Link to="/artistcorner"  style={{marginRight:'2em'}}>Artist Spotlight</Link>
         {/* <Link to="/follow">follow us</Link> */}
       </HeaderNav>
       <Routes>
         <Route exact path="/" element={<Home darkMode={darkMode}/>} />
         <Route exact path="/team" element={<MeetTheTeam darkMode={darkMode}/>} />
-        {/* <Route exact path="/projects" element={<SeeOurProjects darkMode={darkMode}/>} /> */}
-        {/* <Route exact path="/artistcorner" element={<ArtistCorner darkMode={darkMode}/>} /> */}
+        <Route exact path="/projects" element={<SeeOurProjects darkMode={darkMode}/>} />
+        <Route exact path="/artistcorner  style={{marginRight:'2em'}}" element={<ArtistCorner darkMode={darkMode}/>} />
       </Routes>
     </Router>
     <Footer darkMode={darkMode} />
