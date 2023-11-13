@@ -1,0 +1,91 @@
+
+footer {
+  backdrop-filter: blur(20px);
+  bottom:0;
+  height: 50px;
+  padding: 20px 0 30px 0;
+  font-size: 18px;
+}
+
+.social-media a {
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  cursor: pointer;
+  margin: 10px;
+  height: 40px;
+  width: 40px;
+}
+
+.social-media .instagram {
+  background: url(../assets/instagramImg.png);
+}
+
+.social-media .tiktok {
+  background: url(../assets/tiktokImg.png);
+}
+
+.social-media .twitter {
+  background: url(../assets/twitterImg.png);
+}
+
+.social-media .facebook {
+  background: url(../assets/facebookImg.png);
+}
+
+.dark-mode .social-media a {
+  filter: invert(1);
+}
+
+// const LinkStyleDark = styled(LinkStyle)`
+// filter: invert(1);
+// `;
+
+// const InstagramLinkDark= styled(LinkStyleDark)`
+// `;
+
+// const TikTokLinkDark= styled(LinkStyleDark)`
+// background: url(${TikTokImg});
+// `;
+
+// const TwitterLinkDark= styled(LinkStyleDark)`
+// background: url(${TwitterImg});
+// `;
+
+// const FacebookLinkDark= styled(LinkStyleDark)`
+// background: url(${FacebookImg});
+// `;
+
+
+// const SocialMedia = styled.div`
+// display:flex;
+// position: relative;
+// align-items:flex-end;
+// // padding-bottom: 1em;
+// margin-top: 10px;
+// `;
+
+// const LinkStyle = styled.a`
+// background-size: contain !important;
+// background-repeat: no-repeat !important;
+// cursor: pointer;
+// margin: 0 10px;
+// height: 40px;
+// width: 40px;
+// `;
+
+
+// const InstagramLink = styled(LinkStyle)`
+// background: url(${InstagramImg});
+// `;
+
+// const FacebookLink = styled(LinkStyle)`
+// background: url(${FacebookImg});
+// `;
+
+// const TikTokLink = styled(LinkStyle)`
+// background: url(${TikTokImg});
+// `;
+
+// const TwitterLink = styled(LinkStyle)`
+// background: url(${TwitterImg});
+// `;

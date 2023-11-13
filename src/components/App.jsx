@@ -2,17 +2,17 @@ import React from 'react';
 // import '../App.css';
 import '../styles/main.scss';
 // import '../index.css';
-import DarkModeToggleFunc from './DarkModeToggleFunc.jsx';
-import SunMoon from './SunMoon.jsx';
-import WeAre from './WeAre.jsx';
+// import DarkModeToggleFunc from './DarkModeToggleFunc.jsx';
+// import SunMoon from './SunMoon.jsx';
+// import WeAre from './WeAre.jsx';
 import MeetTheTeam from './MeetTheTeam.jsx';
 import SeeOurProjects from './SeeOurProjects.jsx';
 import ArtistCorner from './ArtistCorner.jsx';
 import Footer from './Footer.jsx';
 import Home from './Home.jsx';
 import useDarkMode from 'use-dark-mode';
-import styled from 'styled-components';
-import SDSText from '../assets/SDS_Text.png';
+// import styled from 'styled-components';
+// import SDSText from '../assets/SDS_Text.png';
 import {
   BrowserRouter as Router,
   Routes,
@@ -42,7 +42,7 @@ export default function Header () {
             <Route exact path="/artistcorner" element={<ArtistCorner darkMode={darkMode}/>} />
           </Routes>
         </Router>
-        <footer darkMode={darkMode} />
+        <Footer/>
       </main>
     </>
   );
