@@ -26,7 +26,7 @@ export default function Header () {
     <>
       <main class="position-relative">
         <Router>
-          <nav>
+          <nav class="width-100">
             <Link to="/" style={{flex:'auto'}}>
               <button class="home-button"></button>
             </Link>

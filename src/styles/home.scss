@@ -20,12 +20,13 @@ top: 0;
 display: flex;
 justify-content: flex-end;
 position: fixed;
-width: 100%;
+// width: 100%;
 padding-right: 20px;
 z-index: 3;
 height: 15vh;
 align-items: center;
 max-height: 80px;
+
 }
 nav a {
   margin-left: 2em;
@@ -37,6 +38,92 @@ nav a {
 .dark-mode nav a {
   color:white;
 }
+
+//// "WE ARE" SECTION ////
+
+
+.hero-image--wrapper {
+  // width: 50vw;
+  max-width: 450px;
+  max-height: 425px;
+}
+
+.dark-mode .hero-image--wrapper {
+  mix-blend-mode: lighten;
+}
+
+
+// import StarWithTail from '../assets/StarWithTail.png';
+// import LogoBgWithStars from '../assets/Bg_Stars.png';
+// import LogoBgWithNoStars from '../assets/Bg_noStars.png';
+
+
+.img--shooting-star {
+content:url('../assets/StarWithTail.png');
+animation: 3s shooting-star 1s backwards;
+}
+
+.img--main-logo {
+  height: 45vw;
+  max-width: 450px;
+  max-height: 425px;
+  content:url('../assets/Bg_Stars.png');
+}
+
+.dark-mode .img--main-logo {
+  content:url('../assets/Bg_noStars.png');
+}
+
+.hero-wrapper {
+  user-select: none;
+  width: min-content;
+  color: #0a143dbf;
+}
+
+.dark-mode .hero-wrapper {
+  color: #5f4b8a;
+
+}
+
+// const SweetDreamStudiosWrapperDark = styled(SweetDreamStudiosWrapper)`
+  // mix-blend-mode: difference;
+  // mix-blend-mode: unset;
+  // mix-blend-mode: lighten;
+// `;
+
+// const Intro = styled.div`
+//   position: relative;
+//   font-size: 10vw;
+//   // z-index: 1;
+// `;
+
+.hero-text {
+  // position: relative;
+  font-weight: 400;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  font-size: 9em;
+  background-image: linear-gradient(#b989e1 33%, #3638af 66%);
+  width: min-content;
+  @media (min-width: 768px) {
+    font-size: 8em;
+  }
+  @media (max-width: 768px) {
+    font-size: 5em;
+  }
+  // z-index: 1;
+}
+
+.dark-mode .hero-text {
+  background-image: linear-gradient(#d3b456 33%, #bc8ae3 66%);
+}
+
+
+// const SweetDreamStudiosDark = styled(SweetDreamStudios)`
+
+
 
 // `;
 
