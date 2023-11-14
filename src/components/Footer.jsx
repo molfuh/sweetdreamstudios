@@ -14,7 +14,7 @@ import {
 
 export default function Footer () {
   return (
-    <footer class="flex justify-content-center width-100 direction-column position-absolute">
+    <footer class="z-index-1 width-100 flex align-items-center direction-column position-absolute">
       <span>Follow us to stay up to date on our projects!</span>
       <div class="social-media flex align-items-end">
         <a href="https://www.instagram.com/SweetDreamStudios.vg/" class="instagram" title="instagram" aria-text="instagram link"></a>
