@@ -7,3 +7,49 @@
     transform: translate(0,0);
 }
 }
+
+
+@keyframes clouds-scroll {
+0% {
+    transform:  translate(-350px,0);
+}
+100% {
+    transform:  translate(100vw,0);
+}
+}
+
+@keyframes small-shooting-stars {
+0% {
+    transform: rotate(215deg) translateX(0);
+    opacity: 1;
+    width: 0;
+}
+70% {
+    opacity: 1;
+    width: 200px;
+}
+100% {
+    transform: rotate(215deg) translateX(-200vw);
+    opacity: 0;
+    width: 0;
+}
+}
+
+@keyframes large-shooting-stars {
+0% {
+    transform: translate(100%, -100%);
+}
+100% {
+    transform: translate(0,0);
+}
+}
+
+
+@keyframes planet-enter {
+0% {
+    transform: translate(-200px,-200px);
+}
+100% {
+    transform: translate(0,var(--header-height));
+}
+}

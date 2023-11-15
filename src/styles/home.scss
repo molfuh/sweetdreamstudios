@@ -23,9 +23,10 @@ position: fixed;
 // width: 100%;
 padding-right: 20px;
 z-index: 3;
-height: 15vh;
+// height: 15vh;
+height: var(--header-height);
 align-items: center;
-max-height: 80px;
+// max-height: 80px;
 
 }
 nav a {

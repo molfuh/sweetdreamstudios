@@ -11,15 +11,15 @@ import TwitterImg from '../assets/twitterImg.png';
 export default function Mission ({darkMode}) {
   return (
     <>
-    {darkMode.value ? 
+    {darkMode.value ?
     <>
     <MissionStatement>
-      We are Sweet Dream Studios! 
+      We are Sweet Dream Studios!
     </MissionStatement>
       {/* <SocialMediaTitle>Follow us to stay up to date on our projects: */}
 {/* </SocialMediaTitle> */}
     {/* <SocialMedia> */}
-      
+
     {/* <a href="https://www.instagram.com/SweetDreamStudios.vg/">Instagram</a>
     <a href="https://twitter.com/SweetDreamSTU">Twitter</a>
     <a href="https://www.facebook.com/Sweet-Dream-Studios-104392922407390">Facebook</a>
@@ -54,12 +54,12 @@ export default function Mission ({darkMode}) {
     :
     <>
     <MissionStatement>
-    We are Sweet Dream Studios! 
+    We are Sweet Dream Studios!
   </MissionStatement>
     {/* <SocialMediaTitle>Follow us to stay up to date on our projects: */}
 {/* </SocialMediaTitle> */}
   {/* <SocialMedia> */}
-    
+
   {/* <a href="https://www.instagram.com/SweetDreamStudios.vg/">Instagram</a>
   <a href="https://twitter.com/SweetDreamSTU">Twitter</a>
   <a href="https://www.facebook.com/Sweet-Dream-Studios-104392922407390">Facebook</a>
@@ -200,7 +200,7 @@ const SocialMediaTitle = styled(MissionStatement)`
 
 // const BigShootingStar = styled.img`
 // position: absolute;
-// animation-name: ${BigShootingStarAnimation};
+// animation-name: large-shooting-stars
 // animation-duration: 3s;
 // animation-delay: 1s;
 // width: 100%;

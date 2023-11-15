@@ -24,9 +24,9 @@ return (
   {darkMode.value ?
    <HomeBgDark>
       <DarkModeToggleFunc darkMode={darkMode}/>
-      <FixedPosition>
+      {/* <div class="position-fixed"> */}
         <SunMoon darkMode={darkMode}/>
-      </FixedPosition>
+      {/* </div> */}
         <FirstView>
           <WeAre darkMode={darkMode} />
         </FirstView>
@@ -37,10 +37,10 @@ return (
     :
     <HomeBg>
     <DarkModeToggleFunc darkMode={darkMode}/>
-    <FixedPosition>
+    {/* <div class="position-fixed"> */}
       {/* <Header darkMode={darkMode}/> */}
       <SunMoon darkMode={darkMode}/>
-    </FixedPosition>
+    {/* </div> */}
       <FirstView>
         <WeAre darkMode={darkMode} />
       </FirstView>

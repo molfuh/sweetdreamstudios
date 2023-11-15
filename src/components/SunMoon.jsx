@@ -12,31 +12,30 @@ import BigStar from '../assets/Bigstar.png';
 
 export default function SunMoon ({darkMode}) {
     // const darkMode = useDarkMode(false);
-const random = Math.random();
+  const random = Math.random();
   return (
     <>
         {
           darkMode.value ?
           <>
-          <FixedPosition>
+          <div class="position-fixed height-100">
             <Stars/>
-            {/* <BigShootingStar src={BigStar}/> */}
-            <ShootingStarsContainer>
+            <div>
               <ShootingStar1 random={random}/>
               <ShootingStar2/>
               <ShootingStar3/>
-            </ShootingStarsContainer>
+            </div>
             <MoonImg src={Moon}/>
-            </FixedPosition>
+            </div>
           </>
           :
           <>
-            <FixedPosition>
+          <div class="position-fixed height-100">
             <Cloud />
             <Cloud2/>
             <Cloud3/>
             <Sun />
-            </FixedPosition>
+            </div>
           </>
         }
     </>
@@ -44,49 +43,87 @@ const random = Math.random();
 };
 
 
-const FixedPosition = styled.div`
-/* top: 12vw; */
-top: 0;
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-/* scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 300vh;
-  overflow-x: hidden; */
-  // scroll-snap-points-y: repeat(1zx00vh);
-`;
-
-// const Cloud = styled.div`
-//     background-color: white;
-//     height: 30px;
-//     width: 30px;
+// const FixedPosition = styled.div`
+// /* top: 12vw; */
+// top: 0;
+//   position: fixed;
+//   width: 100vw;
+//   height: 100vh;
+// /* scroll-snap-type: y mandatory;
+//   overflow-y: scroll;
+//   height: 300vh;
+//   overflow-x: hidden; */
+//   // scroll-snap-points-y: repeat(1zx00vh);
 // `;
 
+// // const Cloud = styled.div`
+// //     background-color: white;
+// //     height: 30px;
+// //     width: 30px;
+// // `;
 
-const CloudsScroll = keyframes`
-  0% {transform:  translate(-350px,0);}
-  100% {transform:  translate(100vw,0);}
-`;
 
-const Stars = styled.div`
-    background-image: url(${stars});
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    z-index: -1;
+// const CloudsScroll = keyframes`
+//   0% {transform:  translate(-350px,0);}
+//   100% {transform:  translate(100vw,0);}
+// `;
+
+ const Stars = styled.div`
+     background-image: url(${stars});
+     height: 100vh;
+     width: 100vw;
+     /* position: absolute; */
+     /* z-index: -1; */
     background-size: cover;
 `;
 
-const Cloud = styled.div`
+ const ShootingStar1 = styled.div`
+ animation-name: small-shooting-stars;
+ animation-duration: 10s;
+ border-radius: 50%;
+ animation-fill-mode: backwards;
+ animation-delay: 3s;
+ animation-delay: ${props =>props.random}%;
+ animation-iteration-count: infinite;
+ width: 2px;
+ height:2px;
+ position: absolute;
+   top: 0;
+ background: linear-gradient(to left,#bb91e5 0%,#4047a8 100%);
+ `;
+
+ const ShootingStar2 = styled(ShootingStar1)`
+   animation-delay: 8s;
+   animation-duration: 8s;
+   top: 25%;
+ `;
+
+ const ShootingStar3 = styled(ShootingStar1)`
+ top: 50%;
+ animation-delay: 14s;
+ animation-duration: 9s;
+ `;
+
+ const MoonImg = styled.img`
+ position: absolute;
+ left: 0;
+ top: 0;
+ width: 350px;
+ height: 350px;
+ animation-name: planet-enter;
+ animation-duration: 2s;
+ animation-fill-mode: forwards;
+ `;
+
+
+ const Cloud = styled.div`
   width: 350px;
   height: 120px;
   background: white;
   border-radius: 100px;
   position: absolute;
   top: 50%;
-   /* margin: 30% auto; */
-  animation-name: ${CloudsScroll};
+  animation-name: clouds-scroll;
   animation-duration: 60s;
   animation-direction: reverse;
   animation-fill-mode: backwards;
@@ -124,100 +161,7 @@ const Cloud2 = styled(Cloud)`
 const Cloud3 = styled(Cloud)`
     top: 75%;
     animation-delay: 20s;
-`
-
-const ShootingStars = keyframes`
-// 0% {width: 10px; transform:translateX(0);}
-// 50% {width: 200px;transform:translateX(0);}
-// 100% {width: 10px;transform:translateX(200px);}
-0%
-{
-    transform: rotate(215deg) translateX(0);
-    opacity: 1;
-    width: 0;
-}
-70%
-{
-    opacity: 1;
-    width: 200px;
-}
-100%
-{
-    transform: rotate(215deg) translateX(-200vw);
-    opacity: 0;
-    width: 0;
-}
 `;
-
-const BigShootingStarAnimation = keyframes`
-0%
-{
-    transform: translate(100%, -100%);
-}
-100%
-{
-    transform: translate(0,0);
-}
-`;
-
-
-const BigShootingStar = styled.img`
-position: absolute;
-animation-name: ${BigShootingStarAnimation};
-animation-duration: 3s;
-`;
-
-const ShootingStarsContainer = styled.div`
-
-`;
-
-const ShootingStar1 = styled.div`
-animation-name: ${ShootingStars};
-animation-duration: 10s;
-border-radius: 50%;
-animation-fill-mode: backwards;
-animation-delay: 3s;
-animation-delay: ${props =>props.random}%;
-animation-iteration-count: infinite;
-width: 2px;
-height:2px;
-position: absolute;
-  top: 0;
-background: linear-gradient(to left,#bb91e5 0%,#4047a8 100%);
-`;
-
-const ShootingStar2 = styled(ShootingStar1)`
-  animation-delay: 8s;
-  animation-duration: 8s;
-  /* bottom: 50%; */
-  top: 25%;
-`;
-
-const ShootingStar3 = styled(ShootingStar1)`
-top: 50%;
-animation-delay: 14s;
-animation-duration: 9s;
-`;
-
-const PlanetEnter = keyframes`
-0% {top: 50%; left: -100%}
-100% {top: 80px; left: 0}
-`;
-
-const MoonImg = styled.img`
-position: absolute;
-/* margin: -6vw; */
-/* width: 40vw; */
-left: 0;
-top: 0;
-/* height: 40vw; */
-width: 350px;
-height: 350px;
-animation-name: ${PlanetEnter};
-animation-duration: 2s;
-animation-fill-mode: forwards;
-`;
-
 
 const Sun = styled.div`
 margin-left: 25px;
@@ -226,7 +170,56 @@ width: 100px;
 height: 100px;
 background-color: #ffec8c;
 border-radius: 50%;
-animation-name: ${PlanetEnter};
+animation-name: planet-enter;
 animation-duration: 2s;
 animation-fill-mode: forwards;
 `;
+
+
+// const ShootingStars = keyframes`
+// // 0% {width: 10px; transform:translateX(0);}
+// // 50% {width: 200px;transform:translateX(0);}
+// // 100% {width: 10px;transform:translateX(200px);}
+// 0%
+// {
+//     transform: rotate(215deg) translateX(0);
+//     opacity: 1;
+//     width: 0;
+// }
+// 70%
+// {
+//     opacity: 1;
+//     width: 200px;
+// }
+// 100%
+// {
+//     transform: rotate(215deg) translateX(-200vw);
+//     opacity: 0;
+//     width: 0;
+// }
+// `;
+
+// const BigShootingStarAnimation = keyframes`
+// 0%
+// {
+//     transform: translate(100%, -100%);
+// }
+// 100%
+// {
+//     transform: translate(0,0);
+// }
+// `;
+
+
+// const BigShootingStar = styled.img`
+// position: absolute;
+// animation-name: large-shooting-stars
+// animation-duration: 3s;
+// `;
+
+// const ShootingStarsContainer = styled.div`
+
+// `;
+
+
+
